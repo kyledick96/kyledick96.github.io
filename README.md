@@ -27,5 +27,5 @@ Embedded C, ESP-IDF, Git, MQTT, MATLAB, Python, Altium/KiCad, electronics design
 ## Links
 
 - GitHub: https://github.com/kyledavid36
-- LinkedIn: Add your LinkedIn URL here
+- LinkedIn: www.linkedin.com/in/kyle-dick-6287abc
 - Resume: Add resume PDF link here
