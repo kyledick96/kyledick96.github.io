@@ -1,10 +1,21 @@
-# Kyle Dick Engineering Portfolio
+# Kyle Dick
 
-Engineering portfolio for Kyle Dick, focused on embedded systems, electronics design, instrumentation, data acquisition, and systems engineering project work.
+## Electronic Systems Engineering | Embedded Firmware | Hardware Integration
 
-## About
+I am an Electronic Systems Engineering B.Eng. candidate with hands-on
+experience developing embedded systems using ESP32-S3, STM32 and Raspberry Pi
+platforms.
 
-I am an Electronic Systems Engineering graduate with experience in embedded systems, sensor integration, data acquisition, PCB/schematic design, technical documentation, and engineering project development. This portfolio highlights selected academic, capstone, and applied research projects.
+My work includes embedded C firmware, sensor integration, PCB design,
+communication interfaces, MQTT telemetry, Linux-based edge systems, signal
+processing, hardware bring-up, testing and technical documentation.
+
+I am currently seeking embedded firmware, electronics design, test engineering
+and hardware-software integration opportunities.
+
+[View Resume](documents/kyle-dick-resume-2026.pdf) |
+[LinkedIn](www.linkedin.com/in/kyle-dick-6287abc) |
+[Email](kyle.david.dick@gmail.com)
 
 ## Featured Projects
 
