@@ -1,3 +1,7 @@
+---
+title: Kyle Dick Engineering Portfolio
+---
+
 # Kyle Dick
 
 ## Electronic Systems Engineering | Embedded Firmware | Hardware Integration
