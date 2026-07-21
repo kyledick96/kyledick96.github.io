@@ -15,9 +15,9 @@ and hardware-software integration opportunities.
 
 ## Contact
 
-[View Resume](documents/kyle-dick-resume-2026.pdf) |
-[LinkedIn](www.linkedin.com/in/kyle-dick-6287abc) |
-[Email](kyle.david.dick@gmail.com)
+[View Resume](Documents/Kyle%20Dick%20Firmware%20Developer%20Resume.docx) |
+[LinkedIn](https://www.linkedin.com/in/kyle-dick-6287abc/) |
+[Email](mailto:kyle.david.dick@gmail.com)
 
 I am open to opportunities in embedded firmware, electronics design,
 hardware-software integration, controls and test engineering.
@@ -60,16 +60,36 @@ backend.
 
 #### System Architecture
 
-![SDACS system architecture](images/sdacs-system-architecture.png)
+![SDACS system architecture](Diagrams/ESE_Capstone_SystemBlockDiagram.jpg)
+
+Additional diagrams:
+
+- [SDACS Conceptual Diagram](Diagrams/SDACS_Conceptual_Diagram.jpg)
+- [Recording Nodes Functional Block Diagram](Diagrams/SDACS_RecordingNodes_FunctionalBlockDiagram.jpg)
+- [Server Functional Block Diagram](Diagrams/SDACS_Server_FunctionalBlockDiagram.jpg)
+- [FreqEasy AI/ML System Block Diagram](Diagrams/FreqEasy_AI-ML_SystemBlockDiagram.jpg)
 
 #### Supporting Documents
 
-- [Firmware Architecture Overview](documents/sdacs-firmware-architecture.pdf)
-- [Engineering Design and Test Plan](documents/sdacs-engineering-design-test-plan.pdf)
-- [March 2026 Test Report](documents/sdacs-test-report-march-2026.pdf)
-- [Project Proposal](documents/sdacs-project-proposal.pdf)
+- [Firmware Architecture Overview](Documents/Kyle_Dick_SDACS_Firmware_Architecture_README.pdf)
+- [Engineering Design and Test Plan](Documents/SDACS_EngineeringDesign%26TestPlan.pdf)
+- [SDACS Test Report](Documents/SDACS_Test_Report.pdf)
+- [Project Proposal](Documents/Group2_ProjectProposal_updated.pdf)
+- [Interim Status Report](Documents/KD_Interim_Status_Report.docx)
+- [Summary of Work](Documents/SDACS_SummaryofWork.docx)
+- [Remote Flutter Access and Tailscale Guide](Documents/SDACS_Remote_Flutter_Access_Tailscale_Guide.docx)
 
-  
+#### Software, Data and Presentations
+
+- [Node-RED Flow](Node-RED%20Flow/SDACS_flow.json)
+- [Design and Testing Presentation](Presentations/SDACS_Design%26Testing_Presentation.pdf)
+- [TinyML Presentation](Presentations/TINYML%20Presentation.pptx)
+- [Edge Impulse Dataset Documentation](SDACS%20Datasets/SDACS_Edge_Impulse_Ready_Dataset/SDACS_CLEANING_AND_FINALIZATION_REPORT.md)
+- [Edge Impulse Feature Dictionary](SDACS%20Datasets/SDACS_Edge_Impulse_Ready_Dataset/feature_dictionary.csv)
+- [Node-Level Training Dataset](SDACS%20Datasets/SDACS_Edge_Impulse_Ready_Dataset/sdacs_ei_node_training.csv)
+- [Room-Fused Training Dataset](SDACS%20Datasets/SDACS_Edge_Impulse_Ready_Dataset/sdacs_ei_room_fused_training.csv)
+- [MATLAB Telemetry Dataset](SDACS%20Datasets/MATLAB_Node04_For_Amy/sdacs_matlab_relevant_telemetry.csv)
+
 ### CONTADA Embedded Telemetry and Control Platform
 
 **ESP32 | STM32 | Raspberry Pi | Sensors | MQTT | CAN | Modbus | MATLAB**
@@ -95,7 +115,7 @@ communications, instrumentation and engineering test equipment.
 
 #### Supporting Document
 
-- [Embedded Systems Technical Summary](documents/contada-embedded-systems-summary.pdf)
+- [Embedded Systems Technical Summary](Documents/Kyle_Dick_CONTADA_Embedded_Systems_Technical_Summary.pdf)
 
 ### Multi-Processor Elevator Control System
 
