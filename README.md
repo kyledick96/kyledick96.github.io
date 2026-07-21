@@ -15,23 +15,9 @@ and hardware-software integration opportunities.
 
 ## Contact
 
-[View Resume](Documents/Kyle%20Dick%20Firmware%20Developer%20Resume.docx) |
+[View Resume (PDF)](Documents/Kyle%20Dick%20Firmware%20Developer%20Resume.pdf) |
 [LinkedIn](https://www.linkedin.com/in/kyle-dick-6287abc/) |
 [Email](mailto:kyle.david.dick@gmail.com)
-
-I am open to opportunities in embedded firmware, electronics design,
-hardware-software integration, controls and test engineering.
-
-## Current Development
-
-I am currently improving the SDACS platform through:
-
-- Additional acoustic calibration and frequency-response testing
-- Refinement of the labelled machine-learning dataset
-- More reliable MQTT and Wi-Fi fault handling
-- Structured hardware-interface testing
-- Improved firmware documentation
-- Expansion of the GitHub repositories with reviewed code samples
 
 ## Featured Projects
 
@@ -60,35 +46,50 @@ backend.
 
 #### System Architecture
 
-![SDACS system architecture](Diagrams/ESE_Capstone_SystemBlockDiagram.jpg)
+![Smart Distributed Acoustic Calibration System block diagram](Diagrams/ESE_Capstone_SystemBlockDiagram.png)
 
-Additional diagrams:
+<details>
+<summary><strong>View additional SDACS diagrams</strong></summary>
 
-- [SDACS Conceptual Diagram](Diagrams/SDACS_Conceptual_Diagram.jpg)
-- [Recording Nodes Functional Block Diagram](Diagrams/SDACS_RecordingNodes_FunctionalBlockDiagram.jpg)
-- [Server Functional Block Diagram](Diagrams/SDACS_Server_FunctionalBlockDiagram.jpg)
-- [FreqEasy AI/ML System Block Diagram](Diagrams/FreqEasy_AI-ML_SystemBlockDiagram.jpg)
+#### Recording Node Functional Block Diagram
+
+![Recording node functional block diagram](Diagrams/SDACS_RecordingNodes_FunctionalBlockDiagram.png)
+
+#### Server Functional Block Diagram
+
+![Server functional block diagram](Diagrams/SDACS_Server_FunctionalBlockDiagram.png)
+
+#### Conceptual Node Placement Diagram
+
+![SDACS conceptual node placement diagram](Diagrams/SDACS_Conceptual_Diagram.png)
+
+#### FreqEasy Machine-Learning Pipeline
+
+![FreqEasy AI and machine-learning system block diagram](Diagrams/FreqEasy_AI-ML_SystemBlockDiagram.png)
+
+</details>
 
 #### Supporting Documents
 
-- [Firmware Architecture Overview](Documents/Kyle_Dick_SDACS_Firmware_Architecture_README.pdf)
-- [Engineering Design and Test Plan](Documents/SDACS_EngineeringDesign%26TestPlan.pdf)
-- [SDACS Test Report](Documents/SDACS_Test_Report.pdf)
-- [Project Proposal](Documents/Group2_ProjectProposal_updated.pdf)
-- [Interim Status Report](Documents/KD_Interim_Status_Report.docx)
-- [Summary of Work](Documents/SDACS_SummaryofWork.docx)
-- [Remote Flutter Access and Tailscale Guide](Documents/SDACS_Remote_Flutter_Access_Tailscale_Guide.docx)
+- [Firmware Architecture Overview (PDF)](Documents/Kyle_Dick_SDACS_Firmware_Architecture_README.pdf)
+- [Engineering Design and Test Plan (PDF)](Documents/SDACS_EngineeringDesign%26TestPlan.pdf)
+- [SDACS Test Report (PDF)](Documents/SDACS_Test_Report.pdf)
+- [Project Proposal (PDF)](Documents/Group2_ProjectProposal_updated.pdf)
+- [Interim Status Report (PDF)](Documents/KD_Interim_Status_Report.pdf)
+- [Summary of Work (PDF)](Documents/SDACS_SummaryofWork.pdf)
+- [Remote Flutter Access and Tailscale Guide (PDF)](Documents/SDACS_Remote_Flutter_Access_Tailscale_Guide.pdf)
 
 #### Software, Data and Presentations
 
-- [Node-RED Flow](Node-RED%20Flow/SDACS_flow.json)
-- [Design and Testing Presentation](Presentations/SDACS_Design%26Testing_Presentation.pdf)
-- [TinyML Presentation](Presentations/TINYML%20Presentation.pptx)
+- [Node-RED Flow (JSON)](Node-RED%20Flow/SDACS_flow.json)
+- [Design and Testing Presentation (PDF)](Presentations/SDACS_Design%26Testing_Presentation.pdf)
+- [TinyML Presentation (PDF)](Presentations/TINYML%20Presentation.pdf)
 - [Edge Impulse Dataset Documentation](SDACS%20Datasets/SDACS_Edge_Impulse_Ready_Dataset/SDACS_CLEANING_AND_FINALIZATION_REPORT.md)
-- [Edge Impulse Feature Dictionary](SDACS%20Datasets/SDACS_Edge_Impulse_Ready_Dataset/feature_dictionary.csv)
-- [Node-Level Training Dataset](SDACS%20Datasets/SDACS_Edge_Impulse_Ready_Dataset/sdacs_ei_node_training.csv)
-- [Room-Fused Training Dataset](SDACS%20Datasets/SDACS_Edge_Impulse_Ready_Dataset/sdacs_ei_room_fused_training.csv)
-- [MATLAB Telemetry Dataset](SDACS%20Datasets/MATLAB_Node04_For_Amy/sdacs_matlab_relevant_telemetry.csv)
+- [Edge Impulse Feature Dictionary (CSV)](SDACS%20Datasets/SDACS_Edge_Impulse_Ready_Dataset/feature_dictionary.csv)
+- [Node-Level Training Dataset (CSV)](SDACS%20Datasets/SDACS_Edge_Impulse_Ready_Dataset/sdacs_ei_node_training.csv)
+- [Room-Fused Training Dataset (CSV)](SDACS%20Datasets/SDACS_Edge_Impulse_Ready_Dataset/sdacs_ei_room_fused_training.csv)
+- [MATLAB Telemetry Dataset (CSV)](SDACS%20Datasets/MATLAB_Node04_For_Amy/sdacs_matlab_relevant_telemetry.csv)
+- [MATLAB Dataset Guide (PDF)](SDACS%20Datasets/MATLAB_Node04_For_Amy/SDACS_MATLAB_Guide_for_Amy_v2.pdf)
 
 ### CONTADA Embedded Telemetry and Control Platform
 
@@ -115,7 +116,7 @@ communications, instrumentation and engineering test equipment.
 
 #### Supporting Document
 
-- [Embedded Systems Technical Summary](Documents/Kyle_Dick_CONTADA_Embedded_Systems_Technical_Summary.pdf)
+- [Embedded Systems Technical Summary (PDF)](Documents/Kyle_Dick_CONTADA_Embedded_Systems_Technical_Summary.pdf)
 
 ### Multi-Processor Elevator Control System
 
@@ -138,6 +139,17 @@ communications, instrumentation and engineering test equipment.
 - Performed board bring-up and hardware debugging using laboratory equipment.
 - Integrated electrical, mechanical and software subsystems into a working
   mobile robot.
+
+## Current Development
+
+I am currently improving the SDACS platform through:
+
+- Additional acoustic calibration and frequency-response testing
+- Refinement of the labelled machine-learning dataset
+- More reliable MQTT and Wi-Fi fault handling
+- Structured hardware-interface testing
+- Improved firmware documentation
+- Expansion of the GitHub repositories with reviewed code samples
 
 ## Technical Skills
 
