@@ -170,3 +170,5 @@ board assembly, soldering, hardware bring-up and datasheet interpretation
 
 **Testing and tools:** Git/GitHub, Visual Studio Code, Node-RED, oscilloscope,
 multimeter, bench power supply, serial debugging and technical test procedures
+
+Trigger GitHub Pages deployment
