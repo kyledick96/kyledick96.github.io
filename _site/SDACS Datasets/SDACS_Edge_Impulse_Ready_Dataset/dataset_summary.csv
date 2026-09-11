@@ -1,0 +1,7 @@
+label,node_all_rows,node_training_rows,node_testing_rows,room_all_rows,room_training_rows,room_testing_rows
+low,1840,1380,460,460,345,115
+speech,1840,1380,460,460,345,115
+mid,1840,1380,460,460,345,115
+high,1840,1380,460,460,345,115
+noisy,1840,1380,460,460,345,115
+quiet_room_white_noise,1840,1380,460,460,345,115

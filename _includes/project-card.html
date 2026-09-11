@@ -1,0 +1,11 @@
+<article class="portfolio-card project-card">
+  <div class="card-heading">
+    <p class="eyebrow">{{ include.project.subtitle | escape }}</p>
+    <span class="item-meta">{{ include.project.year | escape }}</span>
+  </div>
+  <h3><a href="{{ include.project.page | relative_url | escape }}">{{ include.project.title | escape }}</a></h3>
+  <p>{{ include.project.summary | escape }}</p>
+  {% assign card_tags = include.project.technologies | slice: 0, 6 %}
+  {% include tags.html items=card_tags %}
+  <a class="card-link" href="{{ include.project.page | relative_url | escape }}">Read case study <span aria-hidden="true">&rarr;</span><span class="sr-only">: {{ include.project.title | escape }}</span></a>
+</article>

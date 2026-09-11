@@ -1,0 +1,10 @@
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <p>&copy; {{ site.time | date: '%Y' }} {{ site.data.profile.name | escape }}</p>
+    <nav aria-label="Social links">
+      <a href="{{ site.data.profile.github | escape }}">GitHub</a>
+      <a href="{{ site.data.profile.linkedin | escape }}">LinkedIn</a>
+      <a href="mailto:{{ site.data.profile.email | escape }}">Email</a>
+    </nav>
+  </div>
+</footer>

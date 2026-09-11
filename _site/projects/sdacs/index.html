@@ -1,0 +1,227 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="color-scheme" content="dark">
+    <title>Smart Distributed Acoustic Calibration System | Kyle Dick</title>
+    <meta name="description" content="A distributed acoustic measurement and analysis platform connecting ESP32-S3 sensor nodes to a Raspberry Pi/Linux backend. I developed node firmware for audio acquisition, signal processing and MQTT telemetry, and contributed to backend integration and validation.">
+    <link rel="canonical" href="http://localhost:4000/projects/sdacs/">
+    <link rel="stylesheet" href="/assets/css/style.css">
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">Skip to content</a>
+    <header class="site-header">
+  <div class="container header-inner">
+    <a class="site-title" href="/">Kyle Dick<span class="brand-mark" aria-hidden="true">.</span></a>
+    <nav aria-label="Main navigation">
+      <a href="/#projects">Projects</a>
+      <a href="/#experience">Experience</a>
+      <a href="/#education">Education</a>
+      <a href="/#skills">Skills</a>
+      <a href="/#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+    <main id="main-content" class="container page-content" tabindex="-1">
+      
+<article class="case-study">
+  <a class="back-link" href="/#projects">&larr; Back to projects</a>
+  <header class="project-heading">
+    <p class="eyebrow">Capstone / Distributed Embedded System</p>
+    <h1>Smart Distributed Acoustic Calibration System</h1>
+    
+    <p class="item-meta">
+      2026
+      
+    </p>
+    
+    <p class="lead">A distributed acoustic measurement and analysis platform connecting ESP32-S3 sensor nodes to a Raspberry Pi/Linux backend. I developed node firmware for audio acquisition, signal processing and MQTT telemetry, and contributed to backend integration and validation.</p>
+    
+<ul class="tag-list" aria-label="Technologies and methods">
+  <li>ESP32-S3</li><li>ESP-IDF</li><li>C</li><li>FreeRTOS</li><li>I2S</li><li>I2C</li><li>FFT</li><li>MQTT</li><li>Wi-Fi</li><li>Raspberry Pi</li><li>Linux</li><li>Mosquitto</li><li>Node-RED</li><li>SQLite</li><li>Git</li>
+</ul>
+
+
+    
+  </header>
+  
+  <figure class="project-hero">
+    <a href="/Diagrams/SDACS_Functional_Units.png"><img src="/Diagrams/SDACS_Functional_Units.png" alt="SDACS end-to-end architecture showing distributed sensor nodes, Raspberry Pi backend, analysis tools and user interface"></a>
+    <figcaption>SDACS end-to-end architecture showing distributed sensor nodes, Raspberry Pi backend, analysis tools and user interface</figcaption>
+  </figure>
+  
+  <div class="prose">
+    
+<h2 id="overview">Overview</h2>
+
+<p>SDACS connects multiple acoustic sensor nodes to a common backend for room-acoustic measurement and analysis. The capstone combined embedded acquisition and processing with Linux services, telemetry storage and engineering validation. I worked primarily on node firmware, hardware interfaces and integration with the backend.</p>
+
+<h2 id="engineering-problem">Engineering Problem</h2>
+
+<p>Measurements from several locations need a consistent acquisition and reporting path before they can support room-level analysis. The project required microphone and environmental data to move from embedded hardware into a shared system where the team could inspect, compare and record it. Calibration differences between nodes also needed investigation.</p>
+
+<h2 id="system-architecture">System Architecture</h2>
+
+<p>Each recording node uses an ESP32-S3 and an I2S microphone. Firmware calculates acoustic features locally and publishes them alongside sensor telemetry using MQTT over Wi-Fi. A Raspberry Pi/Linux backend hosts Mosquitto and Node-RED, with SQLite and CSV storage workflows for later analysis.</p>
+
+<p>The diagrams document the team’s system design. Some blocks describe broader project scope and development-stage features beyond my individual firmware contribution.</p>
+
+<p><img src="/Diagrams/SDACS%20Two-Process%20Flow%20Chart.png" alt="SDACS firmware, backend and user-interface process flow" /></p>
+
+<p>The system separates embedded sensing from backend processing and the user interface. ESP32-S3 nodes publish measurements and status through MQTT to the Raspberry Pi backend, while higher-level services expose system data to the application.</p>
+
+<details>
+<summary>View detailed subsystem diagrams</summary>
+
+![Recording node functional block diagram](/Diagrams/SDACS_RecordingNodes_FunctionalBlockDiagram.png)
+
+![Raspberry Pi server functional block diagram](/Diagrams/SDACS_Server_FunctionalBlockDiagram.png)
+
+[View conceptual node placement](/Diagrams/SDACS_Conceptual_Diagram.png)
+
+</details>
+
+<h2 id="my-contribution">My Contribution</h2>
+
+<p>I developed ESP-IDF firmware in C, integrated acoustic and environmental acquisition, and implemented feature publication. I also diagnosed faults across the hardware, firmware, Wi-Fi connection and MQTT path, and developed calibration and hardware-interface validation procedures.</p>
+
+<p>The project used Git/GitHub branches for team development and integration. My work connected the embedded nodes to shared backend services; the diagrams and reports include contributions from the wider team.</p>
+
+<h2 id="embedded-hardware">Embedded Hardware</h2>
+
+<p>Each SDACS recording node combines an ESP32-S3 development platform with custom hardware for acoustic sensing, environmental measurement and system status.</p>
+
+<p><img src="/Diagrams/SDACS_PCB.png" alt="SDACS custom PCB" /></p>
+
+<p><em>Custom PCB used to integrate the sensing and status hardware for each recording node.</em></p>
+
+<p><img src="/Diagrams/SDACS_Node.png" alt="Assembled SDACS recording node" /></p>
+
+<p><em>Assembled recording node showing the embedded hardware integrated into the physical enclosure.</em></p>
+
+<h2 id="embedded-firmware">Embedded Firmware</h2>
+
+<p>I worked in a FreeRTOS-based environment, with firmware handling I2S acquisition, I2C sensors, configuration and network communication. I implemented continuous audio acquisition and added/configured SD-card credential loading. My configuration work also included calibration-offset persistence concepts using NVS.</p>
+
+<p><img src="/Diagrams/SDACS%20Firmware%20Audio%20Processing%20Flow.png" alt="SDACS firmware audio-processing pipeline" /></p>
+
+<p><em>Audio moves from I2S acquisition through buffering, signal conditioning and feature extraction before measurements are packaged for MQTT publication.</em></p>
+
+<p>The supporting reports capture earlier firmware stages, including timed recording runs and header-based network configuration. Pin assignments also changed between tested hardware configurations, so wiring checks were part of firmware bring-up.</p>
+
+<h2 id="signal-processing">Signal Processing</h2>
+
+<p>I implemented RMS and dBFS calculations and 2048-point FFT feature processing on the ESP32-S3. Local feature calculation allowed the nodes to publish acoustic measurements for inspection and analysis through the telemetry system.</p>
+
+<p>The calibration workflow related digital measurements to reference readings. The case study does not treat dBFS readings alone as calibrated sound-pressure measurements.</p>
+
+<details>
+<summary>View additional audio-processing detail</summary>
+
+![SDACS audio acquisition detail](/Diagrams/SDACS_Audio_Acquisition.png)
+
+</details>
+
+<h2 id="networking-and-backend">Networking and Backend</h2>
+
+<p>I published acoustic and environmental telemetry through MQTT over Wi-Fi and integrated nodes with Raspberry Pi/Linux, Mosquitto, Node-RED and SQLite workflows. Serial logs, broker monitoring and Node-RED debug views helped trace missing or unexpected data through the system.</p>
+
+<p>The linked Node-RED export contains a labelled dataset-capture workflow. It is one part of the backend; it does not contain the complete SQLite integration described in the broader design documentation.</p>
+
+<h3 id="user-interface">User Interface</h3>
+
+<p>The Flutter interface consumes backend data and presents node status, capture controls and acoustic results. It demonstrates the full path from embedded measurement through backend services to a user-facing application.</p>
+
+<p><img src="/Diagrams/SDACS_Flutter_UI.png" alt="SDACS Flutter user interface" /></p>
+
+<h2 id="calibration-and-validation">Calibration and Validation</h2>
+
+<p>I developed procedures using controlled acoustic inputs, reference measurements, serial diagnostics and laboratory equipment. Hardware-interface checks included sensor visibility, pin mapping and the path from acquisition to published telemetry.</p>
+
+<h3 id="physical-test-setup">Physical test setup</h3>
+
+<p><img src="/Diagrams/SDACS_Nodes.png" alt="Four assembled SDACS recording nodes" /></p>
+
+<p><em>Four assembled nodes used for multi-node system testing.</em></p>
+
+<p><img src="/Diagrams/SDACS_Node_Recording_Environment.jpg" alt="SDACS nodes deployed in the recording environment" /></p>
+
+<p><em>Representative indoor test environment used for acoustic and system-level validation.</em></p>
+
+<p>The functional test report records network connection, data logging, acoustic and temperature checks. Its results tables, checklist and later summary do not give a consistent blanket pass: temperature measurement remained a concern, and the observations recommend further acoustic testing in a stricter lab environment. These records document a development-stage test campaign.</p>
+
+<p>The related dataset review also identifies node-to-node response differences and overlapping feature classes. Its offline Random Forest checks are separate from Edge Impulse deployment results.</p>
+
+<h2 id="engineering-challenges">Engineering Challenges</h2>
+
+<p>Wi-Fi reconnect behaviour, dropped MQTT publications, serial-port conflicts and I2S pin naming made faults appear at different layers of the system. I used firmware logs, I2C scans, broker monitoring and physical pin checks to narrow those faults to the relevant interface.</p>
+
+<p>Calibration and configuration also changed as the system developed. Repeatable input conditions and clear records of firmware and wiring configurations were needed to compare measurements across tests.</p>
+
+<h2 id="supporting-artifacts">Supporting Artifacts</h2>
+
+<h3 id="final-project-documentation">Final Project Documentation</h3>
+
+<ul>
+  <li><a href="/Documents/Capstone_II_SDACS_FinalReport.pdf">Capstone II Final Report (PDF)</a></li>
+  <li><a href="/Documents/SDACS_EngineeringDesign&amp;TestPlan.pdf">Engineering Design and Test Plan (PDF)</a></li>
+  <li><a href="/Documents/SDACS_Test_Report.pdf">Functional Test Report (PDF)</a></li>
+  <li><a href="/Documents/Kyle_Dick_SDACS_Firmware_Architecture_README.pdf">Firmware Architecture Overview (PDF)</a></li>
+  <li><a href="/Documents/SDACS_SummaryofWork.pdf">Summary of Work (PDF)</a></li>
+  <li><a href="/Presentations/SDACS_Design&amp;Testing_Presentation.pdf">Design and Testing Presentation (PDF)</a></li>
+  <li><a href="/Node-RED%20Flow/SDACS_flow.json">Node-RED dataset-capture flow (JSON)</a></li>
+  <li><a href="/Documents/SDACS_Remote_Flutter_Access_Tailscale_Guide.pdf">Remote Flutter Access and Tailscale Guide (PDF)</a></li>
+</ul>
+
+<h3 id="data-and-analysis">Data and analysis</h3>
+
+<ul>
+  <li><a href="/SDACS%20Datasets/SDACS_Edge_Impulse_Ready_Dataset/SDACS_CLEANING_AND_FINALIZATION_REPORT.md">Dataset cleaning and quality report (Markdown)</a></li>
+  <li><a href="/SDACS%20Datasets/SDACS_Edge_Impulse_Ready_Dataset/feature_dictionary.csv">Feature dictionary (CSV)</a></li>
+  <li><a href="/SDACS%20Datasets/SDACS_Edge_Impulse_Ready_Dataset/sdacs_ei_node_training.csv">Node-level training data (CSV)</a> and <a href="/SDACS%20Datasets/SDACS_Edge_Impulse_Ready_Dataset/sdacs_ei_node_testing.csv">testing data (CSV)</a></li>
+  <li><a href="/SDACS%20Datasets/SDACS_Edge_Impulse_Ready_Dataset/sdacs_ei_room_fused_training.csv">Room-fused training data (CSV)</a> and <a href="/SDACS%20Datasets/SDACS_Edge_Impulse_Ready_Dataset/sdacs_ei_room_fused_testing.csv">testing data (CSV)</a></li>
+  <li><a href="/SDACS%20Datasets/SDACS_Edge_Impulse_Ready_Dataset/cleaning_audit.csv">Cleaning audit (CSV)</a></li>
+  <li><a href="/SDACS%20Datasets/MATLAB_Node04_For_Amy/sdacs_matlab_relevant_telemetry.csv">MATLAB telemetry dataset (CSV)</a></li>
+  <li><a href="/SDACS%20Datasets/MATLAB_Node04_For_Amy/sdacs_capture_summary_for_matlab.csv">MATLAB capture summary (CSV)</a></li>
+  <li><a href="/SDACS%20Datasets/MATLAB_Node04_For_Amy/SDACS_MATLAB_Guide_for_Amy_v2.pdf">MATLAB dataset guide (PDF)</a></li>
+</ul>
+
+<h3 id="related-freqeasy-ml-work">Related FreqEasy-ML work</h3>
+
+<p>These artifacts cover the related acoustic classification extension, including proposals and interim investigations. They do not establish completion of the final trained model or its deployment.</p>
+
+<ul>
+  <li><a href="/Documents/Group2_ProjectProposal_updated.pdf">FreqEasy-ML proposal (PDF)</a></li>
+  <li><a href="/Documents/KD_Interim_Status_Report.pdf">FreqEasy-ML interim status report (PDF)</a></li>
+  <li><a href="/Diagrams/FreqEasy_AI-ML_SystemBlockDiagram.png">FreqEasy machine-learning pipeline diagram</a></li>
+  <li><a href="/Presentations/TINYML%20Presentation.pdf">TinyML presentation (PDF)</a></li>
+</ul>
+
+<h2 id="technologies">Technologies</h2>
+
+<ul class="tag-list" aria-label="Technologies and methods">
+  <li>ESP32-S3</li><li>ESP-IDF</li><li>C</li><li>FreeRTOS</li><li>I2S</li><li>I2C</li><li>FFT</li><li>MQTT</li><li>Wi-Fi</li><li>Raspberry Pi</li><li>Linux</li><li>Mosquitto</li><li>Node-RED</li><li>SQLite</li><li>Git</li>
+</ul>
+
+
+  </div>
+  <a class="back-link" href="/#projects">&larr; Back to projects</a>
+</article>
+
+    </main>
+    <footer class="site-footer">
+  <div class="container footer-inner">
+    <p>&copy; 2026 Kyle Dick</p>
+    <nav aria-label="Social links">
+      <a href="https://github.com/kyledick96">GitHub</a>
+      <a href="https://www.linkedin.com/in/kyle-dick-6287abc/">LinkedIn</a>
+      <a href="mailto:kyle.david.dick@gmail.com">Email</a>
+    </nav>
+  </div>
+</footer>
+
+  </body>
+</html>

@@ -1,0 +1,11 @@
+title: Kyle Dick | Electronic Systems Engineer
+description: Embedded firmware, PCB and electronic hardware design, instrumentation, and system integration.
+author: Kyle Dick
+url: "https://kyledick96.github.io"
+baseurl: ""
+markdown: kramdown
+# No custom plugins or external theme dependencies.
+exclude:
+  - README.md
+  - AGENTS.md
+  - scripts

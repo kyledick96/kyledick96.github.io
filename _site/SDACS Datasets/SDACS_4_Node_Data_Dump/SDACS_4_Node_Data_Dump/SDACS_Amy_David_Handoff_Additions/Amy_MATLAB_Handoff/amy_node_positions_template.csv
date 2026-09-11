@@ -1,0 +1,5 @@
+node_id,x_m,y_m,height_m,position_note
+node01,0.0,0.0,1.2,placeholder corner / update before final plots
+node02,4.0,0.0,1.2,placeholder corner / update before final plots
+node03,0.0,3.0,1.2,placeholder corner / update before final plots
+node04,4.0,3.0,1.2,placeholder corner / update before final plots

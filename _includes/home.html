@@ -1,0 +1,107 @@
+{% assign profile = site.data.profile %}
+<section class="hero" aria-labelledby="hero-title">
+  <p class="eyebrow">{{ profile.role | escape }}</p>
+  <h1 id="hero-title">{{ profile.name | escape }}</h1>
+  <p class="hero-focus">{{ profile.focus | escape }}</p>
+  <p class="lead">{{ profile.intro | escape }}</p>
+  <div class="actions">
+    <a class="button button-primary" href="#projects">View Projects <span aria-hidden="true">&rarr;</span></a>
+    <a class="button" href="{{ profile.resume | relative_url | escape }}">Resume <span class="file-type">PDF</span></a>
+    <a class="text-action" href="{{ profile.github | escape }}">GitHub</a>
+    <a class="text-action" href="{{ profile.linkedin | escape }}">LinkedIn</a>
+    <a class="text-action" href="#contact">Contact</a>
+  </div>
+</section>
+
+<section id="about" class="section about-section" aria-labelledby="about-title">
+  <h2 id="about-title">About</h2>
+  <div class="about-copy">
+    <p>{{ profile.about | escape }}</p>
+    <p class="item-meta">{{ profile.graduation | escape }}</p>
+  </div>
+</section>
+
+<section id="projects" class="section" aria-labelledby="projects-title">
+  <div class="section-heading"><p class="eyebrow">Design, implementation and validation</p><h2 id="projects-title">Featured Projects</h2></div>
+  <div class="project-grid">
+    {% for project in site.data.projects %}
+    {% if project.featured %}{% include project-card.html project=project %}{% endif %}
+    {% endfor %}
+  </div>
+  {% assign other_projects = site.data.projects | where: "featured", false %}
+  {% if other_projects.size > 0 %}
+  <div class="other-projects">
+    <h3>More engineering work</h3>
+    {% for project in other_projects %}
+    <article class="project-row">
+      <div><p class="item-meta">{{ project.subtitle | escape }} &middot; {{ project.year | escape }}</p><h4><a href="{{ project.page | relative_url | escape }}">{{ project.title | escape }}</a></h4><p>{{ project.summary | escape }}</p></div>
+      <a class="text-action" href="{{ project.page | relative_url | escape }}">Read case study<span class="sr-only">: {{ project.title | escape }}</span> <span aria-hidden="true">&rarr;</span></a>
+    </article>
+    {% endfor %}
+  </div>
+  {% endif %}
+</section>
+
+<section id="experience" class="section" aria-labelledby="experience-title">
+  <div class="section-heading"><p class="eyebrow">Research, industry and manufacturing</p><h2 id="experience-title">Professional Experience</h2></div>
+  <div class="experience-list">
+    {% for experience in site.data.experience %}{% include experience-card.html experience=experience %}{% endfor %}
+  </div>
+</section>
+
+<section id="education" class="section" aria-labelledby="education-title">
+  <div class="section-heading"><h2 id="education-title">Education</h2></div>
+  <div class="education-grid">
+    {% for education in site.data.education %}
+    <article class="portfolio-card education-card{% if education.featured %} education-featured{% endif %}">
+      <p class="eyebrow">{{ education.institution | escape }}</p>
+      <h3>{{ education.qualification | escape }}</h3>
+      <p class="item-meta">{{ education.period | escape }}<br>{{ education.location | escape }}</p>
+      <p class="status">{{ education.status | escape }}</p>
+      <p>{{ education.details | escape }}</p>
+    </article>
+    {% endfor %}
+  </div>
+</section>
+
+<section id="coursework" class="section" aria-labelledby="coursework-title">
+  <div class="section-heading"><h2 id="coursework-title">Selected Coursework</h2><p class="item-meta">Subject areas and design experience.</p></div>
+  {% assign course_groups = site.data.coursework | group_by: "category" %}
+  {% for group in course_groups %}
+  <details class="course-group">
+    <summary>{{ group.name | escape }} <span class="item-meta">({{ group.items.size }} areas)</span></summary>
+    {% assign first_course = group.items | first %}
+    {% if first_course.category_subtitle %}<p class="item-meta">{{ first_course.category_subtitle | escape }}</p>{% endif %}
+    <div class="course-grid">
+      {% for course in group.items %}
+      <article class="course-card">
+        <h3>{{ course.title | escape }}</h3>
+        <p>{{ course.description | escape }}</p>
+        {% include tags.html items=course.technologies %}
+      </article>
+      {% endfor %}
+    </div>
+  </details>
+  {% endfor %}
+</section>
+
+<section id="skills" class="section" aria-labelledby="skills-title">
+  <div class="section-heading"><h2 id="skills-title">Technical Skills</h2></div>
+  <div class="skills-grid">
+    {% for group in site.data.skills %}
+    <article class="skill-group"><h3>{{ group.category | escape }}</h3>{% include tags.html items=group.items %}</article>
+    {% endfor %}
+  </div>
+</section>
+
+<section id="contact" class="section contact-section" aria-labelledby="contact-title">
+  <p class="eyebrow">Engineering opportunities</p>
+  <h2 id="contact-title">Contact</h2>
+  <p class="lead">{{ profile.contact_intro | escape }}</p>
+  <a class="contact-email" href="mailto:{{ profile.email | escape }}">{{ profile.email | escape }}</a>
+  <div class="actions">
+    <a class="button" href="{{ profile.resume | relative_url | escape }}">Resume (PDF)</a>
+    <a class="text-action" href="{{ profile.github | escape }}">GitHub</a>
+    <a class="text-action" href="{{ profile.linkedin | escape }}">LinkedIn</a>
+  </div>
+</section>

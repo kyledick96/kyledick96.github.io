@@ -1,0 +1,235 @@
+# Titles describe subject areas and design experience,
+# not verified official course titles.
+# Technologies include tools, interfaces and methods.
+# Category labels support grouping when rendering the data.
+
+- category: "Electronic Systems Engineering"
+  title: "Embedded Systems"
+  description: >-
+    Embedded C development for microcontrollers, hardware interfaces
+    and integrated embedded systems.
+  technologies: ["Embedded C", "Microcontrollers", "Hardware Interfaces"]
+  featured: false
+
+- category: "Electronic Systems Engineering"
+  title: "Electronics"
+  description: >-
+    Analog and digital electronic systems, including circuit analysis
+    and practical implementation.
+  technologies: ["Analog Electronics", "Digital Electronics", "Circuit Analysis"]
+  featured: false
+
+- category: "Electronic Systems Engineering"
+  title: "PCB Design / Electronic Hardware"
+  description: >-
+    Schematic capture, PCB layout and hardware integration,
+    including Altium-based project work.
+  technologies: ["Altium Designer", "Schematic Capture", "PCB Layout"]
+  featured: false
+
+- category: "Electronic Systems Engineering"
+  title: "Sensors and Instrumentation"
+  description: >-
+    Sensor interfacing, measurement systems and signal acquisition,
+    using engineering test equipment for validation.
+  technologies: ["Sensor Interfacing", "Signal Acquisition", "Engineering Test Equipment"]
+  featured: false
+
+- category: "Electronic Systems Engineering"
+  title: "Communications and Interfaces"
+  description: >-
+    Coursework and project exposure to embedded interfaces and networking,
+    including investigation of RS485/Modbus communication paths.
+  technologies:
+    - "UART/RS232"
+    - "CAN"
+    - "I2C"
+    - "I2S"
+    - "SPI"
+    - "Ethernet"
+    - "Wi-Fi"
+    - "MQTT"
+    - "RS485/Modbus"
+  featured: false
+
+- category: "Electronic Systems Engineering"
+  title: "Control Systems"
+  description: >-
+    Embedded control and system behaviour, with MATLAB/Simulink
+    exposure for modelling and validation.
+  technologies: ["Embedded Control", "MATLAB", "Simulink"]
+  featured: false
+
+- category: "Electronic Systems Engineering"
+  title: "Signal Processing"
+  description: >-
+    Signal acquisition and FFT-based analysis, including acoustic
+    signal-processing work in the SDACS capstone.
+  technologies: ["Signal Acquisition", "FFT", "Acoustic Analysis"]
+  featured: false
+
+- category: "Electronic Systems Engineering"
+  title: "Power Electronics"
+  description: "Academic coursework in power electronics."
+  technologies: []
+  featured: false
+
+- category: "Electronic Systems Engineering"
+  title: "Capstone Engineering Design"
+  description: >-
+    Smart Distributed Acoustic Calibration System (SDACS), integrating
+    firmware, sensors, signal processing, networking, Raspberry Pi/Linux
+    services and engineering validation.
+  technologies:
+    - "Embedded C"
+    - "ESP32-S3"
+    - "Sensors"
+    - "FFT"
+    - "Wi-Fi"
+    - "MQTT"
+    - "Raspberry Pi"
+    - "Linux"
+  featured: false
+
+- category: "Architectural Construction Engineering Technology"
+  category_subtitle: "Selected Coursework and Design Experience"
+  title: "AutoCAD / Technical Drafting"
+  description: >-
+    Designed residential floor plans, elevations and wall sections,
+    applying CAD standards through significant AutoCAD studio experience.
+  technologies: ["AutoCAD", "Technical Drafting", "CAD Standards"]
+  featured: false
+
+- category: "Architectural Construction Engineering Technology"
+  category_subtitle: "Selected Coursework and Design Experience"
+  title: "Revit / Building Information Modelling"
+  description: >-
+    Used Revit for architectural design, including residential outdoor
+    spaces and a conceptual Tesla Motors dealership project.
+  technologies: ["Revit", "Building Information Modelling"]
+  featured: false
+
+- category: "Architectural Construction Engineering Technology"
+  category_subtitle: "Selected Coursework and Design Experience"
+  title: "Residential Building Design"
+  description: >-
+    Applied architectural drafting and residential construction
+    principles to floor plans, elevations and wall sections.
+  technologies: ["Architectural Drafting", "Residential Construction"]
+  featured: false
+
+- category: "Architectural Construction Engineering Technology"
+  category_subtitle: "Selected Coursework and Design Experience"
+  title: "Small Commercial Design"
+  description: >-
+    Developed a small-commercial building design from initial drafting
+    through a completed drawing package.
+  technologies: ["Building Design", "Technical Drafting", "Drawing Documentation"]
+  featured: false
+
+- category: "Architectural Construction Engineering Technology"
+  category_subtitle: "Selected Coursework and Design Experience"
+  title: "Ontario Building Code"
+  description: "Working knowledge of Ontario Building Code Section 9."
+  technologies: ["Ontario Building Code Section 9"]
+  featured: false
+
+- category: "Architectural Construction Engineering Technology"
+  category_subtitle: "Selected Coursework and Design Experience"
+  title: "Steel and Concrete Construction"
+  description: >-
+    Studied steel and concrete construction systems and their
+    application to building design.
+  technologies: ["Steel Construction", "Concrete Construction"]
+  featured: false
+
+- category: "Architectural Construction Engineering Technology"
+  category_subtitle: "Selected Coursework and Design Experience"
+  title: "Surveying"
+  description: "Practical exposure to surveying tools and field measurement."
+  technologies: ["Surveying", "Field Measurement"]
+  featured: false
+
+- category: "Architectural Construction Engineering Technology"
+  category_subtitle: "Selected Coursework and Design Experience"
+  title: "Sustainable Building Design"
+  description: >-
+    Exposure to LEED and WELL concepts through Build-It-Green coursework.
+  technologies: ["LEED Concepts", "WELL Concepts"]
+  featured: false
+
+- category: "Biomedical & Electrical Engineering — Carleton University"
+  category_subtitle: "Completed coursework through second year, with additional study at the beginning of third year (2015–2018)."
+
+  title: "Circuits, Electronics & Signals"
+  description: >-
+    Studied circuit analysis, AC steady-state behaviour, transient response,
+    frequency response, semiconductor devices, operational amplifiers,
+    active filters, BJTs and MOSFETs.
+  technologies:
+    - "Circuit Analysis"
+    - "Analog Electronics"
+    - "Signals"
+    - "Op-Amps"
+    - "Filters"
+  featured: true
+
+- category: "Biomedical & Electrical Engineering — Carleton University"
+  title: "Digital Systems & Programming"
+  description: >-
+    Studied Boolean logic, combinational and sequential circuits,
+    state-machine concepts and imperative programming for engineering systems.
+  technologies:
+    - "Digital Logic"
+    - "Sequential Circuits"
+    - "State Machines"
+    - "Programming"
+  featured: true
+
+- category: "Biomedical & Electrical Engineering — Carleton University"
+  title: "Electromagnetics & Electrical Foundations"
+  description: >-
+    Completed foundational study in electromagnetism, wave motion and
+    electrical engineering concepts relevant to later electronics and
+    embedded-systems work.
+  technologies:
+    - "Electromagnetics"
+    - "Wave Motion"
+    - "Electrical Engineering"
+  featured: true
+
+- category: "Biomedical & Electrical Engineering — Carleton University"
+  title: "Engineering Mathematics & Numerical Methods"
+  description: >-
+    Completed engineering mathematics in calculus, differential equations,
+    linear algebra, multivariable calculus and numerical methods.
+  technologies:
+    - "Calculus"
+    - "Differential Equations"
+    - "Linear Algebra"
+    - "Multivariable Calculus"
+    - "Numerical Methods"
+  featured: true
+
+- category: "Biomedical & Electrical Engineering — Carleton University"
+  title: "Biomedical & Science Foundations"
+  description: >-
+    Completed biology, chemistry and physics coursework supporting the
+    biomedical component of the engineering program.
+  technologies:
+    - "Biology"
+    - "Chemistry"
+    - "Physics"
+    - "Biomedical Engineering Foundations"
+  featured: false
+
+- category: "Biomedical & Electrical Engineering — Carleton University"
+  title: "Engineering Design & Mechanics"
+  description: >-
+    Completed introductory engineering and mechanics coursework that built
+    fundamentals in physical systems, engineering problem solving and design.
+  technologies:
+    - "Engineering Design"
+    - "Mechanics"
+    - "Problem Solving"
+  featured: false

@@ -1,0 +1,34 @@
+---
+layout: default
+---
+{% assign case_project = site.data.projects | where: "slug", page.project | first %}
+<article class="case-study">
+  <a class="back-link" href="{{ '/' | relative_url }}#projects">&larr; Back to projects</a>
+  <header class="project-heading">
+    <p class="eyebrow">{{ case_project.type | default: case_project.subtitle | escape }}</p>
+    <h1>{{ case_project.title | escape }}</h1>
+    {% if case_project.type and case_project.subtitle and case_project.type != case_project.subtitle %}
+    <p class="lead">{{ case_project.subtitle | escape }}</p>
+    {% endif %}
+    <p class="item-meta">
+      {{ case_project.dates | default: case_project.year | escape }}
+      {% if case_project.status %} &middot; {{ case_project.status | escape }}{% endif %}
+    </p>
+    {% if case_project.organization %}
+    <p>{{ case_project.organization | escape }}{% if case_project.client %} &middot; {{ case_project.client | escape }}{% endif %}</p>
+    {% endif %}
+    <p class="lead">{{ case_project.summary | escape }}</p>
+    {% include tags.html items=case_project.technologies %}
+    {% if case_project.github %}<p><a class="button" href="{{ case_project.github | escape }}">View project on GitHub</a></p>{% endif %}
+  </header>
+  {% if case_project.image %}
+  <figure class="project-hero">
+    <a href="{{ case_project.image | relative_url | escape }}"><img src="{{ case_project.image | relative_url | escape }}" alt="{{ case_project.image_alt | default: case_project.title | escape }}"></a>
+    <figcaption>{{ case_project.image_alt | default: case_project.title | escape }}</figcaption>
+  </figure>
+  {% endif %}
+  <div class="prose">
+    {{ content }}
+  </div>
+  <a class="back-link" href="{{ '/' | relative_url }}#projects">&larr; Back to projects</a>
+</article>
