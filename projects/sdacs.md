@@ -19,11 +19,20 @@ Each recording node uses an ESP32-S3 and an I2S microphone. Firmware calculates 
 
 The diagrams document the team's system design. Some blocks describe broader project scope and development-stage features beyond my individual firmware contribution.
 
+![SDACS firmware, backend and user-interface process flow]({{ '/Diagrams/SDACS%20Two-Process%20Flow%20Chart.png' | relative_url }})
+
+The system separates embedded sensing from backend processing and the user interface. ESP32-S3 nodes publish measurements and status through MQTT to the Raspberry Pi backend, while higher-level services expose system data to the application.
+
+<details>
+<summary>View detailed subsystem diagrams</summary>
+
 ![Recording node functional block diagram]({{ '/Diagrams/SDACS_RecordingNodes_FunctionalBlockDiagram.png' | relative_url }})
 
 ![Raspberry Pi server functional block diagram]({{ '/Diagrams/SDACS_Server_FunctionalBlockDiagram.png' | relative_url }})
 
 [View conceptual node placement]({{ '/Diagrams/SDACS_Conceptual_Diagram.png' | relative_url }})
+
+</details>
 
 ## My Contribution
 
@@ -31,9 +40,25 @@ I developed ESP-IDF firmware in C, integrated acoustic and environmental acquisi
 
 The project used Git/GitHub branches for team development and integration. My work connected the embedded nodes to shared backend services; the diagrams and reports include contributions from the wider team.
 
+## Embedded Hardware
+
+Each SDACS recording node combines an ESP32-S3 development platform with custom hardware for acoustic sensing, environmental measurement and system status.
+
+![SDACS custom PCB]({{ '/Diagrams/SDACS_PCB.png' | relative_url }})
+
+*Custom PCB used to integrate the sensing and status hardware for each recording node.*
+
+![Assembled SDACS recording node]({{ '/Diagrams/SDACS_Node.png' | relative_url }})
+
+*Assembled recording node showing the embedded hardware integrated into the physical enclosure.*
+
 ## Embedded Firmware
 
 I worked in a FreeRTOS-based environment, with firmware handling I2S acquisition, I2C sensors, configuration and network communication. I implemented continuous audio acquisition and added/configured SD-card credential loading. My configuration work also included calibration-offset persistence concepts using NVS.
+
+![SDACS firmware audio-processing pipeline]({{ '/Diagrams/SDACS%20Firmware%20Audio%20Processing%20Flow.png' | relative_url }})
+
+*Audio moves from I2S acquisition through buffering, signal conditioning and feature extraction before measurements are packaged for MQTT publication.*
 
 The supporting reports capture earlier firmware stages, including timed recording runs and header-based network configuration. Pin assignments also changed between tested hardware configurations, so wiring checks were part of firmware bring-up.
 
@@ -43,15 +68,38 @@ I implemented RMS and dBFS calculations and 2048-point FFT feature processing on
 
 The calibration workflow related digital measurements to reference readings. The case study does not treat dBFS readings alone as calibrated sound-pressure measurements.
 
+<details>
+<summary>View additional audio-processing detail</summary>
+
+![SDACS audio acquisition detail]({{ '/Diagrams/SDACS_Audio_Acquisition.png' | relative_url }})
+
+</details>
+
 ## Networking and Backend
 
 I published acoustic and environmental telemetry through MQTT over Wi-Fi and integrated nodes with Raspberry Pi/Linux, Mosquitto, Node-RED and SQLite workflows. Serial logs, broker monitoring and Node-RED debug views helped trace missing or unexpected data through the system.
 
 The linked Node-RED export contains a labelled dataset-capture workflow. It is one part of the backend; it does not contain the complete SQLite integration described in the broader design documentation.
 
+### User Interface
+
+The Flutter interface consumes backend data and presents node status, capture controls and acoustic results. It demonstrates the full path from embedded measurement through backend services to a user-facing application.
+
+![SDACS Flutter user interface]({{ '/Diagrams/SDACS_Flutter_UI.png' | relative_url }})
+
 ## Calibration and Validation
 
 I developed procedures using controlled acoustic inputs, reference measurements, serial diagnostics and laboratory equipment. Hardware-interface checks included sensor visibility, pin mapping and the path from acquisition to published telemetry.
+
+### Physical test setup
+
+![Four assembled SDACS recording nodes]({{ '/Diagrams/SDACS_Nodes.png' | relative_url }})
+
+*Four assembled nodes used for multi-node system testing.*
+
+![SDACS nodes deployed in the recording environment]({{ '/Diagrams/SDACS_Node_Recording_Environment.jpg' | relative_url }})
+
+*Representative indoor test environment used for acoustic and system-level validation.*
 
 The functional test report records network connection, data logging, acoustic and temperature checks. Its results tables, checklist and later summary do not give a consistent blanket pass: temperature measurement remained a concern, and the observations recommend further acoustic testing in a stricter lab environment. These records document a development-stage test campaign.
 
@@ -65,10 +113,12 @@ Calibration and configuration also changed as the system developed. Repeatable i
 
 ## Supporting Artifacts
 
-### Firmware, design and testing
+### Final Project Documentation
 
-{% include documents.html documents=case_project.documents %}
-
+- [Capstone II Final Report (PDF)]({{ '/Documents/Capstone_II_SDACS_FinalReport.pdf' | relative_url }})
+- [Engineering Design and Test Plan (PDF)]({{ '/Documents/SDACS_EngineeringDesign%26TestPlan.pdf' | relative_url }})
+- [Functional Test Report (PDF)]({{ '/Documents/SDACS_Test_Report.pdf' | relative_url }})
+- [Firmware Architecture Overview (PDF)]({{ '/Documents/Kyle_Dick_SDACS_Firmware_Architecture_README.pdf' | relative_url }})
 - [Summary of Work (PDF)]({{ '/Documents/SDACS_SummaryofWork.pdf' | relative_url }})
 - [Design and Testing Presentation (PDF)]({{ '/Presentations/SDACS_Design%26Testing_Presentation.pdf' | relative_url }})
 - [Node-RED dataset-capture flow (JSON)]({{ '/Node-RED%20Flow/SDACS_flow.json' | relative_url }})

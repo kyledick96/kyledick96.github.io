@@ -25,8 +25,8 @@
     - "Node-RED"
     - "SQLite"
     - "Git"
-  image: "/Diagrams/ESE_Capstone_SystemBlockDiagram.png"
-  image_alt: "SDACS system block diagram showing recording nodes, server and application"
+  image: "/Diagrams/SDACS_Functional_Units.png"
+  image_alt: "SDACS end-to-end architecture showing distributed sensor nodes, Raspberry Pi backend, analysis tools and user interface"
   page: "/projects/sdacs/"
   github: null
   documents:
@@ -130,4 +130,28 @@
   github: null
   documents: []
   year: 2025
+  status: null
+- title: "Architectural Design & Construction Coursework"
+  slug: "acet-design"
+  subtitle: "Selected ACET Design Work"
+  summary: >-
+    Selected architectural and construction-design work from my earlier
+    studies in Architectural Construction Engineering Technology, including
+    AutoCAD drafting, Revit/BIM and construction documentation.
+  featured: false
+  technologies:
+    - "AutoCAD"
+    - "Revit"
+    - "BIM"
+    - "Technical Drafting"
+    - "Construction Documentation"
+  image: null
+  page: "/projects/acet-design/"
+  github: null
+  documents:
+    - title: "First Floor Plan (PDF)"
+      url: "/Documents/FIRST%20FLOOR%20PLAN.pdf"
+    - title: "Building Elevations (PDF)"
+      url: "/Documents/Kyle%20Dick%20Elevations.pdf"
+  year: null
   status: null
