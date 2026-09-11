@@ -1,0 +1,9 @@
+# Coursework entries are available as site.data.coursework, in list order.
+# To add the first item, remove [] and uncomment/fill in the example below.
+# To add another item, append another block beginning with "- title:".
+# Include only coursework you want to highlight. Use spaces, not tabs.
+[]
+
+# - title: "Course title"
+#   institution: "Institution name"
+#   summary: "Relevant topics, practical work, or a course project."

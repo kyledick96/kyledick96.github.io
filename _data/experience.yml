@@ -1,0 +1,14 @@
+# Experience entries are available as site.data.experience.
+# This list is intentionally empty until the content migration.
+# To add the first item, remove [] and uncomment/fill in the example below.
+# To add another item, append another block beginning with "- role:".
+# Quote periods and any text containing a colon. Use spaces, not tabs.
+[]
+
+# - role: "Role title"
+#   organization: "Organization name"
+#   period: "Month YYYY - Month YYYY"
+#   summary: "A short description of the role."
+#   highlights:
+#     - "Describe a contribution and its outcome."
+#     - "Describe another contribution."

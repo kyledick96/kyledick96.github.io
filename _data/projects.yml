@@ -1,0 +1,17 @@
+# Project summaries are available as site.data.projects, in the order listed.
+# Existing project content remains in index.md until the later migration.
+# To add the first item, remove [] and uncomment/fill in the example below.
+# To add another item, append another block beginning with "- id:".
+# Use a unique lowercase, hyphenated id. Create the linked Markdown page in
+# projects/ with front matter: layout: default, title, and a matching permalink.
+# url is a site-root path. Encode spaces as %20 and ampersands as %26 in paths.
+# Leave url out until the detail page exists; the card can render without it.
+[]
+
+# - id: "example-project"
+#   title: "Project title"
+#   summary: "What the project does and your contribution."
+#   technologies:
+#     - "Embedded C"
+#     - "STM32"
+#   url: "/projects/example-project/"

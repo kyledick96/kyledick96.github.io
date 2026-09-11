@@ -1,0 +1,23 @@
+{% comment %}Expects include.experience using the schema in _data/experience.yml.{% endcomment %}
+{% assign experience = include.experience %}
+{% if experience %}
+<article class="portfolio-card">
+  <h3>{{ experience.role | escape }}</h3>
+  {% if experience.organization %}
+  <p>{{ experience.organization | escape }}</p>
+  {% endif %}
+  {% if experience.period %}
+  <p class="item-meta">{{ experience.period | escape }}</p>
+  {% endif %}
+  {% if experience.summary %}
+  <p>{{ experience.summary | escape }}</p>
+  {% endif %}
+  {% if experience.highlights.size > 0 %}
+  <ul>
+    {% for highlight in experience.highlights %}
+    <li>{{ highlight | escape }}</li>
+    {% endfor %}
+  </ul>
+  {% endif %}
+</article>
+{% endif %}

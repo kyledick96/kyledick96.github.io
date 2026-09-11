@@ -1,0 +1,10 @@
+# Education entries are available as site.data.education, in list order.
+# To add the first item, remove [] and uncomment/fill in the example below.
+# To add another item, append another block beginning with "- qualification:".
+# Quote periods; state candidate/expected status where applicable.
+[]
+
+# - qualification: "Degree or qualification"
+#   institution: "Institution name"
+#   period: "YYYY - YYYY"
+#   details: "Optional specialization, candidate status, or relevant detail."

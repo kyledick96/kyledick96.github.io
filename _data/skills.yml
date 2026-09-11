@@ -1,0 +1,12 @@
+# Skill groups are available as site.data.skills, in list order.
+# Existing skills remain in index.md until the later migration.
+# To add the first group, remove [] and uncomment/fill in the example below.
+# To add another group, append another block beginning with "- category:".
+# To add a skill within a group, append a line under items at the same indent.
+[]
+
+# - category: "Firmware and programming"
+#   items:
+#     - "C"
+#     - "C++"
+#     - "Python"
