@@ -49,8 +49,8 @@
   </header>
   
   <figure class="project-hero">
-    <a href="/Diagrams/ESE_Capstone_SystemBlockDiagram.png"><img src="/Diagrams/ESE_Capstone_SystemBlockDiagram.png" alt="SDACS system block diagram showing recording nodes, server and application"></a>
-    <figcaption>SDACS system block diagram showing recording nodes, server and application</figcaption>
+    <a href="/Diagrams/SDACS_Functional_Units.png"><img src="/Diagrams/SDACS_Functional_Units.png" alt="SDACS end-to-end architecture showing distributed sensor nodes, Raspberry Pi backend, analysis tools and user interface"></a>
+    <figcaption>SDACS end-to-end architecture showing distributed sensor nodes, Raspberry Pi backend, analysis tools and user interface</figcaption>
   </figure>
   
   <div class="prose">
@@ -69,11 +69,20 @@
 
 <p>The diagrams document the team’s system design. Some blocks describe broader project scope and development-stage features beyond my individual firmware contribution.</p>
 
-<p><img src="/Diagrams/SDACS_RecordingNodes_FunctionalBlockDiagram.png" alt="Recording node functional block diagram" /></p>
+<p><img src="/Diagrams/SDACS%20Two-Process%20Flow%20Chart.png" alt="SDACS firmware, backend and user-interface process flow" /></p>
 
-<p><img src="/Diagrams/SDACS_Server_FunctionalBlockDiagram.png" alt="Raspberry Pi server functional block diagram" /></p>
+<p>The system separates embedded sensing from backend processing and the user interface. ESP32-S3 nodes publish measurements and status through MQTT to the Raspberry Pi backend, while higher-level services expose system data to the application.</p>
 
-<p><a href="/Diagrams/SDACS_Conceptual_Diagram.png">View conceptual node placement</a></p>
+<details>
+<summary>View detailed subsystem diagrams</summary>
+
+![Recording node functional block diagram](/Diagrams/SDACS_RecordingNodes_FunctionalBlockDiagram.png)
+
+![Raspberry Pi server functional block diagram](/Diagrams/SDACS_Server_FunctionalBlockDiagram.png)
+
+[View conceptual node placement](/Diagrams/SDACS_Conceptual_Diagram.png)
+
+</details>
 
 <h2 id="my-contribution">My Contribution</h2>
 
@@ -81,9 +90,25 @@
 
 <p>The project used Git/GitHub branches for team development and integration. My work connected the embedded nodes to shared backend services; the diagrams and reports include contributions from the wider team.</p>
 
+<h2 id="embedded-hardware">Embedded Hardware</h2>
+
+<p>Each SDACS recording node combines an ESP32-S3 development platform with custom hardware for acoustic sensing, environmental measurement and system status.</p>
+
+<p><img src="/Diagrams/SDACS_PCB.png" alt="SDACS custom PCB" /></p>
+
+<p><em>Custom PCB used to integrate the sensing and status hardware for each recording node.</em></p>
+
+<p><img src="/Diagrams/SDACS_Node.png" alt="Assembled SDACS recording node" /></p>
+
+<p><em>Assembled recording node showing the embedded hardware integrated into the physical enclosure.</em></p>
+
 <h2 id="embedded-firmware">Embedded Firmware</h2>
 
 <p>I worked in a FreeRTOS-based environment, with firmware handling I2S acquisition, I2C sensors, configuration and network communication. I implemented continuous audio acquisition and added/configured SD-card credential loading. My configuration work also included calibration-offset persistence concepts using NVS.</p>
+
+<p><img src="/Diagrams/SDACS%20Firmware%20Audio%20Processing%20Flow.png" alt="SDACS firmware audio-processing pipeline" /></p>
+
+<p><em>Audio moves from I2S acquisition through buffering, signal conditioning and feature extraction before measurements are packaged for MQTT publication.</em></p>
 
 <p>The supporting reports capture earlier firmware stages, including timed recording runs and header-based network configuration. Pin assignments also changed between tested hardware configurations, so wiring checks were part of firmware bring-up.</p>
 
@@ -93,15 +118,38 @@
 
 <p>The calibration workflow related digital measurements to reference readings. The case study does not treat dBFS readings alone as calibrated sound-pressure measurements.</p>
 
+<details>
+<summary>View additional audio-processing detail</summary>
+
+![SDACS audio acquisition detail](/Diagrams/SDACS_Audio_Acquisition.png)
+
+</details>
+
 <h2 id="networking-and-backend">Networking and Backend</h2>
 
 <p>I published acoustic and environmental telemetry through MQTT over Wi-Fi and integrated nodes with Raspberry Pi/Linux, Mosquitto, Node-RED and SQLite workflows. Serial logs, broker monitoring and Node-RED debug views helped trace missing or unexpected data through the system.</p>
 
 <p>The linked Node-RED export contains a labelled dataset-capture workflow. It is one part of the backend; it does not contain the complete SQLite integration described in the broader design documentation.</p>
 
+<h3 id="user-interface">User Interface</h3>
+
+<p>The Flutter interface consumes backend data and presents node status, capture controls and acoustic results. It demonstrates the full path from embedded measurement through backend services to a user-facing application.</p>
+
+<p><img src="/Diagrams/SDACS_Flutter_UI.png" alt="SDACS Flutter user interface" /></p>
+
 <h2 id="calibration-and-validation">Calibration and Validation</h2>
 
 <p>I developed procedures using controlled acoustic inputs, reference measurements, serial diagnostics and laboratory equipment. Hardware-interface checks included sensor visibility, pin mapping and the path from acquisition to published telemetry.</p>
+
+<h3 id="physical-test-setup">Physical test setup</h3>
+
+<p><img src="/Diagrams/SDACS_Nodes.png" alt="Four assembled SDACS recording nodes" /></p>
+
+<p><em>Four assembled nodes used for multi-node system testing.</em></p>
+
+<p><img src="/Diagrams/SDACS_Node_Recording_Environment.jpg" alt="SDACS nodes deployed in the recording environment" /></p>
+
+<p><em>Representative indoor test environment used for acoustic and system-level validation.</em></p>
 
 <p>The functional test report records network connection, data logging, acoustic and temperature checks. Its results tables, checklist and later summary do not give a consistent blanket pass: temperature measurement remained a concern, and the observations recommend further acoustic testing in a stricter lab environment. These records document a development-stage test campaign.</p>
 
@@ -115,19 +163,13 @@
 
 <h2 id="supporting-artifacts">Supporting Artifacts</h2>
 
-<h3 id="firmware-design-and-testing">Firmware, design and testing</h3>
-
-<ul class="artifact-list">
-  
-  <li><a href="/Documents/Kyle_Dick_SDACS_Firmware_Architecture_README.pdf">Firmware Architecture Overview (PDF)</a></li>
-  
-  <li><a href="/Documents/SDACS_EngineeringDesign&amp;TestPlan.pdf">Engineering Design and Test Plan (PDF)</a></li>
-  
-  <li><a href="/Documents/SDACS_Test_Report.pdf">Functional Test Report (PDF)</a></li>
-  
-</ul>
+<h3 id="final-project-documentation">Final Project Documentation</h3>
 
 <ul>
+  <li><a href="/Documents/Capstone_II_SDACS_FinalReport.pdf">Capstone II Final Report (PDF)</a></li>
+  <li><a href="/Documents/SDACS_EngineeringDesign&amp;TestPlan.pdf">Engineering Design and Test Plan (PDF)</a></li>
+  <li><a href="/Documents/SDACS_Test_Report.pdf">Functional Test Report (PDF)</a></li>
+  <li><a href="/Documents/Kyle_Dick_SDACS_Firmware_Architecture_README.pdf">Firmware Architecture Overview (PDF)</a></li>
   <li><a href="/Documents/SDACS_SummaryofWork.pdf">Summary of Work (PDF)</a></li>
   <li><a href="/Presentations/SDACS_Design&amp;Testing_Presentation.pdf">Design and Testing Presentation (PDF)</a></li>
   <li><a href="/Node-RED%20Flow/SDACS_flow.json">Node-RED dataset-capture flow (JSON)</a></li>

@@ -1,33 +1,12 @@
-- qualification: "Bachelor of Applied Engineering – Electronic Systems Engineering (Co-op)"
+- qualification: "Bachelor of Applied Engineering – Electronic Systems Engineering"
   institution: "Conestoga College"
-  location: "Cambridge, Ontario"
-  period: "Sept. 2022 – Aug. 2026"
-  status: "Completed / Graduated Aug. 2026"
-  details: >-
-    CEAB-accredited engineering program focused on embedded systems,
-    electronics, firmware, controls, communications, signal processing
-    and hands-on system integration.
-  featured: true
+  period: "Completed 2026"
+  details: "Studies in Embedded system design, firmware, software, hardware testing and bring up, along with supplementary material in DSP and power topics."
 
-- qualification: "Architectural Construction Engineering Technology studies"
+- qualification: "Architectural Construction Engineering Technology"
   institution: "Conestoga College"
-  location: "Cambridge, Ontario"
-  period: "2019 – 2021"
-  status: "Previous studies"
-  details: >-
-    Previous architectural/construction engineering technology studies
-    covering AutoCAD, Revit, CAD standards, Ontario Building Code Section 9,
-    surveying, residential and small-commercial design, steel and concrete
-    construction, construction methods, and LEED/WELL concepts.
-  featured: true
+  details: "Studies in architectural design and construction technology with a strong focus on building science and BIM."
 
-- qualification: "Biomedical Electrical Engineering coursework"
+- qualification: "Previous engineering studies"
   institution: "Carleton University"
-  location: "Ottawa, Ontario"
-  period: "2015 – 2018"
-  status: "Coursework completed before transferring programs"
-  details: >-
-    Completed foundational engineering coursework before transferring
-    programs, with exposure to electrical engineering, programming,
-    mathematics and physical systems.
-  featured: false
+  details: "Undertook engineering studies focused on Biomedical devices and Electrical Engineering Topics."
