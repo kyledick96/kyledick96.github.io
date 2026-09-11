@@ -1,0 +1,5 @@
+issue,impact,action_taken
+test_tone_15khz target frequency metadata was 5000 in the original CSV,Can confuse interpretation and summaries,Corrected to 15000 in added clean files.
+test_tone_15khz has incomplete node rows: node03=2,"Class/node balance issue. In this dump, node03 only has two raw rows for the 15 kHz capture.",Kept rows in clean training CSV but documented imbalance; re-record 15 kHz if final model needs equal node coverage.
+Summary CSV contains run IDs not present in raw acoustic feature CSV: capture_20260708190829,"Amy can use the summary for plotting, but David cannot train from raw rows for those runs unless the raw feature CSV is also exported.",Amy best-runs summary uses the complete 15 kHz summary run and flags raw row availability.
+db_spl is uncalibrated,Do not use SPL as a final input/claim yet.,Excluded db_spl from David training feature file and treated it as metadata.

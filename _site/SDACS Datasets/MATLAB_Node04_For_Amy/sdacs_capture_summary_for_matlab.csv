@@ -1,0 +1,4 @@
+request_id,test_label,node_id,rows,mean_effective_sample_rate_hz,sample_rate_ok_rows,mean_band_ratio_sum,mean_tone_1khz_ratio,mean_tone_1khz_local_ratio,mean_tone_1khz_contrast_db,tone_detected_rows,mean_bass_ratio,mean_mid_ratio,mean_presence_ratio,mean_high_ratio
+capture_20260705195835,quiet_room,node04,17,47975.707647,17,1.0,0.071324,0.290488,-5.808824,1,0.337731,0.252249,0.103728,0.112507
+capture_20260705195958,tone_1khz_100db,node04,19,48034.355789,19,1.0,0.131239,0.586731,-2.657368,8,0.296438,0.272922,0.093531,0.10121
+capture_20260705200123,low_frequency_test,node04,19,48082.860526,19,1.0,0.059694,0.271214,-6.356316,1,0.434708,0.193144,0.086958,0.0894

@@ -157,3 +157,79 @@
     Exposure to LEED and WELL concepts through Build-It-Green coursework.
   technologies: ["LEED Concepts", "WELL Concepts"]
   featured: false
+
+- category: "Biomedical & Electrical Engineering — Carleton University"
+  category_subtitle: "Completed coursework through second year, with additional study at the beginning of third year (2015–2018)."
+
+  title: "Circuits, Electronics & Signals"
+  description: >-
+    Studied circuit analysis, AC steady-state behaviour, transient response,
+    frequency response, semiconductor devices, operational amplifiers,
+    active filters, BJTs and MOSFETs.
+  technologies:
+    - "Circuit Analysis"
+    - "Analog Electronics"
+    - "Signals"
+    - "Op-Amps"
+    - "Filters"
+  featured: true
+
+- category: "Biomedical & Electrical Engineering — Carleton University"
+  title: "Digital Systems & Programming"
+  description: >-
+    Studied Boolean logic, combinational and sequential circuits,
+    state-machine concepts and imperative programming for engineering systems.
+  technologies:
+    - "Digital Logic"
+    - "Sequential Circuits"
+    - "State Machines"
+    - "Programming"
+  featured: true
+
+- category: "Biomedical & Electrical Engineering — Carleton University"
+  title: "Electromagnetics & Electrical Foundations"
+  description: >-
+    Completed foundational study in electromagnetism, wave motion and
+    electrical engineering concepts relevant to later electronics and
+    embedded-systems work.
+  technologies:
+    - "Electromagnetics"
+    - "Wave Motion"
+    - "Electrical Engineering"
+  featured: true
+
+- category: "Biomedical & Electrical Engineering — Carleton University"
+  title: "Engineering Mathematics & Numerical Methods"
+  description: >-
+    Completed engineering mathematics in calculus, differential equations,
+    linear algebra, multivariable calculus and numerical methods.
+  technologies:
+    - "Calculus"
+    - "Differential Equations"
+    - "Linear Algebra"
+    - "Multivariable Calculus"
+    - "Numerical Methods"
+  featured: true
+
+- category: "Biomedical & Electrical Engineering — Carleton University"
+  title: "Biomedical & Science Foundations"
+  description: >-
+    Completed biology, chemistry and physics coursework supporting the
+    biomedical component of the engineering program.
+  technologies:
+    - "Biology"
+    - "Chemistry"
+    - "Physics"
+    - "Biomedical Engineering Foundations"
+  featured: false
+
+- category: "Biomedical & Electrical Engineering — Carleton University"
+  title: "Engineering Design & Mechanics"
+  description: >-
+    Completed introductory engineering and mechanics coursework that built
+    fundamentals in physical systems, engineering problem solving and design.
+  technologies:
+    - "Engineering Design"
+    - "Mechanics"
+    - "Problem Solving"
+  featured: false

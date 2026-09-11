@@ -1,0 +1,34 @@
+SDACS EDGE IMPULSE IMPORT
+
+Recommended primary dataset:
+  sdacs_ei_room_fused_training.csv
+  sdacs_ei_room_fused_testing.csv
+
+Why:
+  The room-fused version uses all four acoustic nodes and performed substantially
+  better in a capture-held-out offline sanity check than treating every node row
+  as an independent sample.
+
+CSV Wizard mapping:
+  - Data type: tabular
+  - Label column: label
+  - Metadata columns: capture_id, sample_index, dataset_split
+  - Input features: every column ending in _mean, _std, or _range
+  - Do not use capture_id, sample_index, or dataset_split as model inputs.
+
+Upload:
+  1. Upload sdacs_ei_room_fused_training.csv to the training category.
+  2. Upload sdacs_ei_room_fused_testing.csv to the testing category.
+  3. In the learning block, split training/validation by metadata key capture_id
+     when that option is available. This prevents seconds from the same capture
+     appearing in both training and validation.
+  4. Start with a small dense classification network or the EON Tuner.
+  5. Save the confusion matrix, per-class precision/recall, RAM, flash, and
+     inference-latency screenshots for the final report.
+
+Fallback/diagnostic dataset:
+  sdacs_ei_node_training.csv
+  sdacs_ei_node_testing.csv
+
+For the node-level files, map node_id, capture_id, source_run_id, sample_index,
+timestamp_iso, and dataset_split as metadata, not input features.

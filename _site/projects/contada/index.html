@@ -1,0 +1,139 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="color-scheme" content="dark">
+    <title>CONTADA Embedded Telemetry and Control Platform | Kyle Dick</title>
+    <meta name="description" content="An embedded telemetry, instrumentation and control platform for a wind-energy system, developed through the Conestoga SMART Research Centre collaboration with Purus Power. I developed ESP32-S3 firmware, integrated sensors and Linux-hosted telemetry services, and contributed to architecture and validation.">
+    <link rel="canonical" href="http://localhost:4000/projects/contada/">
+    <link rel="stylesheet" href="/assets/css/style.css">
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">Skip to content</a>
+    <header class="site-header">
+  <div class="container header-inner">
+    <a class="site-title" href="/">Kyle Dick<span class="brand-mark" aria-hidden="true">.</span></a>
+    <nav aria-label="Main navigation">
+      <a href="/#projects">Projects</a>
+      <a href="/#experience">Experience</a>
+      <a href="/#education">Education</a>
+      <a href="/#skills">Skills</a>
+      <a href="/#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+    <main id="main-content" class="container page-content" tabindex="-1">
+      
+<article class="case-study">
+  <a class="back-link" href="/#projects">&larr; Back to projects</a>
+  <header class="project-heading">
+    <p class="eyebrow">Industry Research / Embedded Instrumentation</p>
+    <h1>CONTADA Embedded Telemetry and Control Platform</h1>
+    
+    <p class="item-meta">
+      Sept. 2025 – Aug. 2026
+      
+    </p>
+    
+    <p>Conestoga SMART Research Centre &middot; Purus Power</p>
+    
+    <p class="lead">An embedded telemetry, instrumentation and control platform for a wind-energy system, developed through the Conestoga SMART Research Centre collaboration with Purus Power. I developed ESP32-S3 firmware, integrated sensors and Linux-hosted telemetry services, and contributed to architecture and validation.</p>
+    
+<ul class="tag-list" aria-label="Technologies and methods">
+  <li>ESP32-S3</li><li>C</li><li>ESP-IDF</li><li>I2C</li><li>Raspberry Pi</li><li>Linux</li><li>Mosquitto</li><li>MQTT</li><li>Node-RED</li><li>Wi-Fi</li><li>Ethernet</li><li>CAN</li><li>RS485</li><li>Modbus</li><li>DAQ</li><li>Instrumentation</li><li>MATLAB</li><li>Simulink</li>
+</ul>
+
+
+    
+  </header>
+  
+  <div class="prose">
+    
+<h2 id="overview">Overview</h2>
+
+<p>CONTADA was an embedded telemetry, instrumentation and control platform for a wind-energy system, developed through the Conestoga SMART Research Centre collaboration with Purus Power. The project ran from September 2025 to August 2026. My contribution focused on embedded firmware, sensor integration, telemetry and validation.</p>
+
+<h2 id="engineering-problem">Engineering Problem</h2>
+
+<p>The platform needed to connect physical measurements, edge devices and Linux-hosted services into a system the engineering team could test and inspect. Sensor acquisition, communications and instrumentation choices had to be considered together because a fault anywhere along the path could affect the measurements available to the team.</p>
+
+<h2 id="system-architecture">System Architecture</h2>
+
+<p>I contributed to architecture work involving embedded controllers, Raspberry Pi/Linux systems, DAQ hardware and communications. ESP32-S3 edge devices acquired sensor data, while Mosquitto MQTT and Node-RED supported telemetry and visualization on the Linux side.</p>
+
+<p>The architecture work included evaluation of alternative interfaces and networking approaches. The technical summary describes the project at a high level rather than presenting a final production design.</p>
+
+<h2 id="my-contribution">My Contribution</h2>
+
+<p>I developed and tested C firmware, integrated sensors and connected embedded targets to Linux services. I also performed hardware bring-up, diagnosed end-to-end telemetry faults and developed validation procedures.</p>
+
+<p>I presented technical progress and engineering recommendations in client-facing reviews with Purus Power and the SMART Centre team. Architecture and equipment decisions were collaborative.</p>
+
+<h2 id="embedded-hardware-and-firmware">Embedded Hardware and Firmware</h2>
+
+<p>My ESP32-S3 firmware work covered I2C, analog and digital sensor acquisition and telemetry. Documented sensor work includes BME680, BNO085 and ADXL335 devices.</p>
+
+<p>During bring-up, I interpreted schematics, datasheets and interface documentation alongside serial output and bench measurements. This connected firmware behaviour to the wiring and electrical interfaces being tested.</p>
+
+<h2 id="instrumentation-and-daq">Instrumentation and DAQ</h2>
+
+<p>I contributed to DAQ evaluation and the integration of measurement hardware into the system architecture. Bench work used oscilloscopes, multimeters and power supplies to investigate hardware and sensor behaviour.</p>
+
+<p>Sensor validation and serial diagnostics supported the transition from individual device checks to system integration. The public project documentation does not specify a final DAQ configuration or measured system accuracy.</p>
+
+<h2 id="communications">Communications</h2>
+
+<p>I integrated MQTT telemetry with Raspberry Pi/Linux, Mosquitto and Node-RED, and diagnosed faults across device firmware, the network and backend services.</p>
+
+<p>I evaluated Wi-Fi versus Ethernet approaches and investigated CAN and RS485/Modbus interfaces. These were architecture and interface investigations; the available records do not establish that every evaluated protocol was deployed in the final platform.</p>
+
+<h2 id="testing-and-validation">Testing and Validation</h2>
+
+<p>I developed repeatable bench procedures to check sensor readings, communication interfaces and end-to-end telemetry. Troubleshooting combined serial logs, network checks, Node-RED inspection and laboratory measurements to identify where data stopped matching expectations.</p>
+
+<p>The work produced validation procedures and engineering recommendations for the team. No numerical reliability or performance result is claimed here.</p>
+
+<h2 id="engineering-decisions">Engineering Decisions</h2>
+
+<p>Communications evaluation considered embedded interfaces alongside Linux services and measurement hardware. I contributed findings to the team’s architecture discussions rather than selecting the entire system independently.</p>
+
+<p>I also created MATLAB/Simulink models for sensor-driven control behaviour and validation. These models helped communicate control behaviour during development and technical reviews.</p>
+
+<h2 id="supporting-artifacts">Supporting Artifacts</h2>
+
+<ul class="artifact-list">
+  
+  <li><a href="/Documents/Kyle_Dick_CONTADA_Embedded_Systems_Technical_Summary.pdf">Embedded Systems Technical Summary (PDF)</a></li>
+  
+</ul>
+
+<h2 id="technologies">Technologies</h2>
+
+<p>The list includes implemented tools and interfaces evaluated during architecture work.</p>
+
+<ul class="tag-list" aria-label="Technologies and methods">
+  <li>ESP32-S3</li><li>C</li><li>ESP-IDF</li><li>I2C</li><li>Raspberry Pi</li><li>Linux</li><li>Mosquitto</li><li>MQTT</li><li>Node-RED</li><li>Wi-Fi</li><li>Ethernet</li><li>CAN</li><li>RS485</li><li>Modbus</li><li>DAQ</li><li>Instrumentation</li><li>MATLAB</li><li>Simulink</li>
+</ul>
+
+
+  </div>
+  <a class="back-link" href="/#projects">&larr; Back to projects</a>
+</article>
+
+    </main>
+    <footer class="site-footer">
+  <div class="container footer-inner">
+    <p>&copy; 2026 Kyle Dick</p>
+    <nav aria-label="Social links">
+      <a href="https://github.com/kyledick96">GitHub</a>
+      <a href="https://www.linkedin.com/in/kyle-dick-6287abc/">LinkedIn</a>
+      <a href="mailto:kyle.david.dick@gmail.com">Email</a>
+    </nav>
+  </div>
+</footer>
+
+  </body>
+</html>

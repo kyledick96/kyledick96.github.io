@@ -1,0 +1,153 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="color-scheme" content="dark">
+    <title>Nerf Battle Bot Mobile Robot Platform | Kyle Dick</title>
+    <meta name="description" content="A mobile robot platform combining custom PCB design, embedded motor control and Raspberry Pi communication. I designed and assembled boards in Altium Designer, investigated power and interface faults during bring-up, and developed C firmware for motor control and RS232/UART integration.">
+    <link rel="canonical" href="http://localhost:4000/projects/nerf-battle-bot/">
+    <link rel="stylesheet" href="/assets/css/style.css">
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">Skip to content</a>
+    <header class="site-header">
+  <div class="container header-inner">
+    <a class="site-title" href="/">Kyle Dick<span class="brand-mark" aria-hidden="true">.</span></a>
+    <nav aria-label="Main navigation">
+      <a href="/#projects">Projects</a>
+      <a href="/#experience">Experience</a>
+      <a href="/#education">Education</a>
+      <a href="/#skills">Skills</a>
+      <a href="/#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+    <main id="main-content" class="container page-content" tabindex="-1">
+      
+<article class="case-study">
+  <a class="back-link" href="/#projects">&larr; Back to projects</a>
+  <header class="project-heading">
+    <p class="eyebrow">Embedded Hardware / PCB Design</p>
+    <h1>Nerf Battle Bot Mobile Robot Platform</h1>
+    
+    <p class="item-meta">
+      2024
+      
+    </p>
+    
+    <p class="lead">A mobile robot platform combining custom PCB design, embedded motor control and Raspberry Pi communication. I designed and assembled boards in Altium Designer, investigated power and interface faults during bring-up, and developed C firmware for motor control and RS232/UART integration.</p>
+    
+<ul class="tag-list" aria-label="Technologies and methods">
+  <li>Altium Designer</li><li>PCB Design</li><li>Schematic Capture</li><li>Embedded C</li><li>UART</li><li>RS232</li><li>Raspberry Pi</li><li>Motor Control</li><li>DC Motors</li><li>Stepper Motors</li><li>Servo Motors</li><li>Hardware Bring-up</li>
+</ul>
+
+
+    
+  </header>
+  
+  <div class="prose">
+    
+<h2 id="overview">Overview</h2>
+
+<p>The Nerf Battle Bot project combined custom electronic hardware, embedded motor control and a Raspberry Pi interface in a mobile robot platform. I designed schematics and PCBs in Altium Designer, assembled boards and developed C firmware. The hardware reports document both functional tests and faults that required rework or an alternative board.</p>
+
+<h2 id="design-requirements">Design Requirements</h2>
+
+<p>The electronics needed to support power distribution, microcontroller interfaces, motor control and communications. DC, stepper and servo motors brought different interface requirements, while the board arrangement needed to accommodate connections between electrical and mechanical subsystems.</p>
+
+<h2 id="system-architecture">System Architecture</h2>
+
+<p>The platform connected embedded control hardware to motors and a Raspberry Pi 3 running Linux. My work spanned the custom boards, firmware and RS232/UART communication between the controller and Raspberry Pi.</p>
+
+<p>The supplied reports cover an early hardware stage. They distinguish the original board design from the configuration used to continue testing after power-board faults.</p>
+
+<h2 id="pcb-architecture">PCB Architecture</h2>
+
+<p>PCB1 combined power circuitry and motor drivers. PCB2 provided microcontroller and peripheral interfaces, including communications and connections for inputs and outputs.</p>
+
+<p>Separating these functions allowed PCB2 testing to continue using a classmate’s PCB1 when my original power board remained faulty. That substitution is part of the documented integration history.</p>
+
+<h2 id="schematic-design">Schematic Design</h2>
+
+<p>I designed power, motor-control, microcontroller and communications circuitry in Altium Designer. The hardware report includes regulator and motor-driver test plans and records checks on power connections and peripheral interfaces.</p>
+
+<p>The debugging work exposed differences between the intended circuit and the assembled board. Missing connections and regulator routing problems required tracing the design through to the physical hardware.</p>
+
+<h2 id="pcb-layout">PCB Layout</h2>
+
+<p>I laid out the custom boards and investigated placement and routing issues during assembly and testing. One header arrangement placed keypad and limit-switch connections beneath the STM32 board, obstructing access. The report proposed reversing those headers to restore access.</p>
+
+<p>A missing MCU power connection on PCB2 was bridged with a jumper wire. The reports also record recommendations to revise component placement, routing and via locations in a future PCB1 revision.</p>
+
+<h2 id="embedded-firmware">Embedded Firmware</h2>
+
+<p>I developed C firmware for DC, stepper and servo motor control and debugged hardware interfaces and motion behaviour. Firmware and hardware testing progressed together as the board configuration changed.</p>
+
+<p>The early hardware report predates completion of the DC-motor and encoder code. Its observations describe that stage of development, while my broader project work also included DC-motor firmware and Raspberry Pi communication.</p>
+
+<h2 id="motor-control">Motor Control</h2>
+
+<p>The hardware report records successful servo movement with PCB2 connected to the substitute power board. Stepper testing produced shaft twitching, with correction of the motor wiring proposed as the next action.</p>
+
+<p>The original PCB1 motor-driver and power faults prevented a complete successful test of that board. These results guided further debugging rather than establishing that every motor subsystem had passed.</p>
+
+<h2 id="raspberry-pi-communication">Raspberry Pi Communication</h2>
+
+<p>I implemented RS232/UART communication with a Raspberry Pi 3 running Linux. This work connected the embedded controller to the higher-level system interface.</p>
+
+<p>The linked early reports defer RS232 testing to a later semester. They support the board design and bring-up history, but do not document the later communication validation.</p>
+
+<h2 id="board-bring-up-and-debugging">Board Bring-up and Debugging</h2>
+
+<p>Assembly included solder-paste application, SMD placement, reflow and through-hole soldering. I used laboratory test equipment to check continuity, power connections and interface behaviour. X-ray and thermal images helped investigate assembly and regulator problems, with support from classmates and lab staff.</p>
+
+<p>The completed-PCB report records initial success on the 5 V tests and failure on the 3.3 V tests. The later hardware report records continued regulator faults after rework, including trace modifications and a jumper connection. PCB1 remained unsuitable for the intended operation at that stage.</p>
+
+<p>PCB2 testing continued with another student’s power board. This allowed parts of the microcontroller and motor interface to be exercised while the original power-board problems remained unresolved.</p>
+
+<h2 id="system-integration">System Integration</h2>
+
+<p>I worked across electrical, firmware and mechanical interfaces, including board connections, motor wiring and controller communication. The early tests produced a working servo demonstration and identified outstanding power, stepper and DC-motor work.</p>
+
+<p>The reports separate observed behaviour from proposed fixes. They also document where collaboration and substitute hardware were needed to continue testing.</p>
+
+<h2 id="supporting-artifacts">Supporting Artifacts</h2>
+
+<ul class="artifact-list">
+  
+  <li><a href="/Documents/KD%20V&amp;V%20Test%20Report%20Final.pdf">Completed PCB Verification and Validation Report (PDF)</a></li>
+  
+  <li><a href="/Documents/KD%20HW%20Testing%20Report.pdf">Hardware Testing Report (PDF)</a></li>
+  
+</ul>
+
+<p>The reports contain assembly photographs, schematic and Altium routing excerpts, X-ray images, thermal inspection evidence and test setups. They are retained as dated engineering records, including unresolved issues.</p>
+
+<h2 id="technologies">Technologies</h2>
+
+<ul class="tag-list" aria-label="Technologies and methods">
+  <li>Altium Designer</li><li>PCB Design</li><li>Schematic Capture</li><li>Embedded C</li><li>UART</li><li>RS232</li><li>Raspberry Pi</li><li>Motor Control</li><li>DC Motors</li><li>Stepper Motors</li><li>Servo Motors</li><li>Hardware Bring-up</li>
+</ul>
+
+
+  </div>
+  <a class="back-link" href="/#projects">&larr; Back to projects</a>
+</article>
+
+    </main>
+    <footer class="site-footer">
+  <div class="container footer-inner">
+    <p>&copy; 2026 Kyle Dick</p>
+    <nav aria-label="Social links">
+      <a href="https://github.com/kyledick96">GitHub</a>
+      <a href="https://www.linkedin.com/in/kyle-dick-6287abc/">LinkedIn</a>
+      <a href="mailto:kyle.david.dick@gmail.com">Email</a>
+    </nav>
+  </div>
+</footer>
+
+  </body>
+</html>
