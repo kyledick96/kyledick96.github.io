@@ -1,17 +1,133 @@
-# Project summaries are available as site.data.projects, in the order listed.
-# Existing project content remains in index.md until the later migration.
-# To add the first item, remove [] and uncomment/fill in the example below.
-# To add another item, append another block beginning with "- id:".
-# Use a unique lowercase, hyphenated id. Create the linked Markdown page in
-# projects/ with front matter: layout: default, title, and a matching permalink.
-# url is a site-root path. Encode spaces as %20 and ampersands as %26 in paths.
-# Leave url out until the detail page exists; the card can render without it.
-[]
+# Card metadata is shared with project layouts. Match slug to page.project.
+# Use null for unknown metadata; documents contain title/url pairs.
+- title: "Smart Distributed Acoustic Calibration System"
+  slug: "sdacs"
+  subtitle: "Capstone / Distributed Embedded System"
+  summary: >-
+    A distributed acoustic measurement and analysis platform connecting
+    ESP32-S3 sensor nodes to a Raspberry Pi/Linux backend.
+    I developed node firmware for audio acquisition, signal processing
+    and MQTT telemetry, and contributed to backend integration and validation.
+  featured: true
+  technologies:
+    - "ESP32-S3"
+    - "ESP-IDF"
+    - "C"
+    - "FreeRTOS"
+    - "I2S"
+    - "I2C"
+    - "FFT"
+    - "MQTT"
+    - "Wi-Fi"
+    - "Raspberry Pi"
+    - "Linux"
+    - "Mosquitto"
+    - "Node-RED"
+    - "SQLite"
+    - "Git"
+  image: "/Diagrams/ESE_Capstone_SystemBlockDiagram.png"
+  image_alt: "SDACS system block diagram showing recording nodes, server and application"
+  page: "/projects/sdacs/"
+  github: null
+  documents:
+    - title: "Firmware Architecture Overview (PDF)"
+      url: "/Documents/Kyle_Dick_SDACS_Firmware_Architecture_README.pdf"
+    - title: "Engineering Design and Test Plan (PDF)"
+      url: "/Documents/SDACS_EngineeringDesign%26TestPlan.pdf"
+    - title: "Functional Test Report (PDF)"
+      url: "/Documents/SDACS_Test_Report.pdf"
+  year: 2026
+  status: null
 
-# - id: "example-project"
-#   title: "Project title"
-#   summary: "What the project does and your contribution."
-#   technologies:
-#     - "Embedded C"
-#     - "STM32"
-#   url: "/projects/example-project/"
+- title: "CONTADA Embedded Telemetry and Control Platform"
+  slug: "contada"
+  subtitle: "Industry Research / Embedded Instrumentation"
+  client: "Purus Power"
+  organization: "Conestoga SMART Research Centre"
+  summary: >-
+    An embedded telemetry, instrumentation and control platform for a
+    wind-energy system, developed through the Conestoga SMART Research
+    Centre collaboration with Purus Power.
+    I developed ESP32-S3 firmware, integrated sensors and Linux-hosted
+    telemetry services, and contributed to architecture and validation.
+  featured: true
+  technologies:
+    - "ESP32-S3"
+    - "C"
+    - "ESP-IDF"
+    - "I2C"
+    - "Raspberry Pi"
+    - "Linux"
+    - "Mosquitto"
+    - "MQTT"
+    - "Node-RED"
+    - "Wi-Fi"
+    - "Ethernet"
+    - "CAN"
+    - "RS485"
+    - "Modbus"
+    - "DAQ"
+    - "Instrumentation"
+    - "MATLAB"
+    - "Simulink"
+  image: null
+  page: "/projects/contada/"
+  github: null
+  documents:
+    - title: "Embedded Systems Technical Summary (PDF)"
+      url: "/Documents/Kyle_Dick_CONTADA_Embedded_Systems_Technical_Summary.pdf"
+  year: "2025–2026"
+  dates: "Sept. 2025 – Aug. 2026"
+  status: null
+
+- title: "Nerf Battle Bot Mobile Robot Platform"
+  slug: "nerf-battle-bot"
+  subtitle: "Embedded Hardware / PCB Design"
+  summary: >-
+    A mobile robot platform combining custom PCB design, embedded motor
+    control and Raspberry Pi communication.
+    I designed and assembled boards in Altium Designer, investigated power
+    and interface faults during bring-up, and developed C firmware for
+    motor control and RS232/UART integration.
+  featured: true
+  technologies:
+    - "Altium Designer"
+    - "PCB Design"
+    - "Schematic Capture"
+    - "Embedded C"
+    - "UART"
+    - "RS232"
+    - "Raspberry Pi"
+    - "Motor Control"
+    - "DC Motors"
+    - "Stepper Motors"
+    - "Servo Motors"
+    - "Hardware Bring-up"
+  image: null
+  page: "/projects/nerf-battle-bot/"
+  github: null
+  documents:
+    - title: "Completed PCB Verification and Validation Report (PDF)"
+      url: "/Documents/KD%20V%26V%20Test%20Report%20Final.pdf"
+    - title: "Hardware Testing Report (PDF)"
+      url: "/Documents/KD%20HW%20Testing%20Report.pdf"
+  year: 2024
+  status: null
+
+- title: "Steam Punk Elevator Project VI"
+  slug: "elevator"
+  subtitle: "Multi-Processor Embedded Control System"
+  summary: >-
+    A multi-processor elevator control project integrating STM32,
+    Raspberry Pi, Arduino and motor-controller hardware through CAN.
+    I developed STM32 control firmware, debugged faults across embedded,
+    Linux and UI layers, and tested emergency-call, floor-selection
+    and input-lockout behaviour.
+  featured: false
+  technologies: ["STM32", "C", "CAN", "Raspberry Pi", "Arduino", "Embedded Control", "Motor Control", "System Testing"]
+  image: null
+  page: "/projects/elevator/"
+  github: null
+  documents: []
+  year: 2025
+  status: null

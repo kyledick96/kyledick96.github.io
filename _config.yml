@@ -1,13 +1,11 @@
-# Site settings. Content lists belong in _data; presentation belongs in layouts,
-# includes, and assets/css/style.css. Restart Jekyll after changing this file.
-title: Kyle Dick Engineering Portfolio
-description: Electronic Systems Engineering, Embedded Firmware, and Hardware Integration
+title: Kyle Dick | Electronic Systems Engineer
+description: Embedded firmware, PCB and electronic hardware design, instrumentation, and system integration.
 author: Kyle Dick
-
-# This is a user site served at the domain root, so baseurl stays empty.
 url: "https://kyledick96.github.io"
 baseurl: ""
 markdown: kramdown
-
-# Standard GitHub Pages/Jekyll features are sufficient for this scaffold.
-# Keep the existing asset directories available at their current paths.
+# No custom plugins or external theme dependencies.
+exclude:
+  - README.md
+  - AGENTS.md
+  - scripts

@@ -1,23 +1,20 @@
-{% comment %}Expects include.experience using the schema in _data/experience.yml.{% endcomment %}
-{% assign experience = include.experience %}
-{% if experience %}
-<article class="portfolio-card">
-  <h3>{{ experience.role | escape }}</h3>
-  {% if experience.organization %}
-  <p>{{ experience.organization | escape }}</p>
-  {% endif %}
-  {% if experience.period %}
-  <p class="item-meta">{{ experience.period | escape }}</p>
-  {% endif %}
-  {% if experience.summary %}
-  <p>{{ experience.summary | escape }}</p>
-  {% endif %}
-  {% if experience.highlights.size > 0 %}
-  <ul>
-    {% for highlight in experience.highlights %}
-    <li>{{ highlight | escape }}</li>
-    {% endfor %}
-  </ul>
+<article class="portfolio-card experience-card">
+  <div class="experience-heading">
+    <div>
+      <p class="eyebrow">{{ include.experience.company | escape }}</p>
+      {% if include.experience.client != '' and include.experience.client %}
+      <p class="engagement">{{ include.experience.client | escape }}</p>
+      {% endif %}
+      <h3>{{ include.experience.role | escape }}</h3>
+    </div>
+    <p class="item-meta">{{ include.experience.dates | escape }}<br>{{ include.experience.location | escape }}</p>
+  </div>
+  <p>{{ include.experience.summary | escape }}</p>
+  {% if include.experience.highlights.size > 0 %}
+  <details>
+    <summary>Responsibilities and technical work<span class="sr-only">: {{ include.experience.company | escape }} {{ include.experience.client | escape }}</span></summary>
+    <ul>{% for highlight in include.experience.highlights %}<li>{{ highlight | escape }}</li>{% endfor %}</ul>
+    {% include tags.html items=include.experience.technologies %}
+  </details>
   {% endif %}
 </article>
-{% endif %}

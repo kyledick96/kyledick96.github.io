@@ -1,10 +1,33 @@
-# Education entries are available as site.data.education, in list order.
-# To add the first item, remove [] and uncomment/fill in the example below.
-# To add another item, append another block beginning with "- qualification:".
-# Quote periods; state candidate/expected status where applicable.
-[]
+- qualification: "Bachelor of Applied Engineering – Electronic Systems Engineering (Co-op)"
+  institution: "Conestoga College"
+  location: "Cambridge, Ontario"
+  period: "Sept. 2022 – Aug. 2026"
+  status: "Completed / Graduated Aug. 2026"
+  details: >-
+    CEAB-accredited engineering program focused on embedded systems,
+    electronics, firmware, controls, communications, signal processing
+    and hands-on system integration.
+  featured: true
 
-# - qualification: "Degree or qualification"
-#   institution: "Institution name"
-#   period: "YYYY - YYYY"
-#   details: "Optional specialization, candidate status, or relevant detail."
+- qualification: "Architectural Construction Engineering Technology studies"
+  institution: "Conestoga College"
+  location: "Cambridge, Ontario"
+  period: "2019 – 2021"
+  status: "Previous studies"
+  details: >-
+    Previous architectural/construction engineering technology studies
+    covering AutoCAD, Revit, CAD standards, Ontario Building Code Section 9,
+    surveying, residential and small-commercial design, steel and concrete
+    construction, construction methods, and LEED/WELL concepts.
+  featured: true
+
+- qualification: "Biomedical Electrical Engineering coursework"
+  institution: "Carleton University"
+  location: "Ottawa, Ontario"
+  period: "2015 – 2018"
+  status: "Coursework completed before transferring programs"
+  details: >-
+    Completed foundational engineering coursework before transferring
+    programs, with exposure to electrical engineering, programming,
+    mathematics and physical systems.
+  featured: false

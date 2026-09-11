@@ -1,0 +1,7 @@
+{% if include.documents.size > 0 %}
+<ul class="artifact-list">
+  {% for document in include.documents %}
+  <li><a href="{{ document.url | relative_url | escape }}">{{ document.title | escape }}</a></li>
+  {% endfor %}
+</ul>
+{% endif %}

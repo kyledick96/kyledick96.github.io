@@ -1,168 +1,55 @@
-# Kyle Dick
+# Engineering portfolio
 
-## Electronic Systems Engineering | Embedded Firmware | Hardware Integration
+Kyle Dick's portfolio at https://kyledick96.github.io, built with GitHub Pages and standard Jekyll/Liquid. No JavaScript framework, external font, custom plugin or npm build is required.
 
-I am an Electronic Systems Engineering B.Eng. candidate with hands-on
-experience developing embedded systems using ESP32-S3, STM32 and Raspberry Pi
-platforms.
+## Content map
 
-My work includes embedded C firmware, sensor integration, PCB design,
-communication interfaces, MQTT telemetry, Linux-based edge systems, signal
-processing, hardware bring-up, testing and technical documentation.
+| Content | Edit |
+| --- | --- |
+| Hero, about, contact and social links | `_data/profile.yml` |
+| Employment | `_data/experience.yml` |
+| Education / coursework | `_data/education.yml` / `_data/coursework.yml` |
+| Project cards and shared metadata | `_data/projects.yml` |
+| Project case studies | `projects/*.md` |
+| Skill categories | `_data/skills.yml` |
+| Site settings | `_config.yml` |
 
-I am currently seeking embedded firmware, electronics design, test engineering
-and hardware-software integration opportunities.
+Experience displays in YAML order. Keep the two SMART Centre engagements separate and retain their client fields. Education uses `qualification`, `institution`, `location`, `period`, `status`, `details` and `featured`. Coursework groups by `category`; each entry supplies a subject-area title, description and technologies. Its titles need not be official course names. All coursework remains accessible regardless of its featured flag.
 
-## Contact
+## Add or edit a project
 
-[View Resume (PDF)](Documents/Kyle%20Dick%20Firmware%20Developer%20Resume.pdf) |
-[LinkedIn](https://www.linkedin.com/in/kyle-dick-6287abc/) |
-[Email](mailto:kyle.david.dick@gmail.com)
+1. Add an entry to `_data/projects.yml` with a unique `slug`, title, subtitle/type, summary, featured flag, technologies and `page` path. Use `null` for unknown year/status, an unavailable image or an unconfirmed project GitHub URL. Use `documents: []` when there are no artifacts.
+2. Create `projects/<slug>.md` with the front matter below and write the case study in Markdown. Match its permalink to the YAML `page` value.
+3. Include documents and technology badges where appropriate using the existing project pages as examples. Titles, summaries and other shared metadata come from YAML.
 
-## Featured Projects
+```yaml
+---
+layout: project
+project: example
+permalink: /projects/example/
+---
+```
 
-### Smart Distributed Acoustic Calibration System
+`subtitle` currently supplies the project type. An optional separate `type` is supported by the project layout. Optional `dates` overrides the year display on detail pages. Images use `image` and descriptive `image_alt` fields. Document entries use `title` and `url`. Only three projects are currently featured; other projects appear below those cards.
 
-**ESP32-S3 | Embedded C | ESP-IDF | I2S | I2C | FFT | MQTT | Raspberry Pi**
+Skills use a list of `category` / `items` groups. Preserve qualifications such as working knowledge; do not add proficiency scores.
 
-SDACS is a distributed acoustic measurement system developed to collect and
-analyze room-acoustic information using multiple wireless sensor nodes.
+## Presentation and assets
 
-Each node uses an ESP32-S3 and an I2S MEMS microphone to acquire audio,
-calculate acoustic features and transmit measurements to a Raspberry Pi-based
-backend.
+`index.md` includes `_includes/home.html`. Shared cards, navigation and small list components live in `_includes/`; page shells live in `_layouts/`. The project layout reads metadata by slug.
 
-#### My Contributions
+Edit the CSS custom properties at the top of `assets/css/style.css` to change the theme. Responsive rules are near the bottom. Navigation and expandable detail sections work without JavaScript.
 
-- Developed ESP-IDF firmware in C for ESP32-S3 sensor nodes.
-- Integrated I2S microphone acquisition and environmental sensors.
-- Implemented RMS, dBFS and 2048-point FFT feature calculations.
-- Published acoustic and environmental telemetry through MQTT over Wi-Fi.
-- Integrated sensor nodes with Mosquitto and Node-RED on Raspberry Pi/Linux.
-- Diagnosed firmware, Wi-Fi and MQTT communication problems using serial logs
-  and bench testing.
-- Contributed to calibration, validation and engineering test procedures.
-- Used Git/GitHub for branch-based development and team integration.
+Keep existing Documents, Diagrams, Presentations, Node-RED Flow and SDACS Datasets paths intact. Add new images or PDFs to the relevant directory without moving old files. Use exact filename case and URL-encode spaces and ampersands. In Markdown, use Jekyll's `relative_url` filter, for example:
 
-#### System Architecture
+```liquid
+[Report]({{ '/Documents/report.pdf' | relative_url }})
+```
 
-![Smart Distributed Acoustic Calibration System block diagram](Diagrams/ESE_Capstone_SystemBlockDiagram.png)
+The two robot reports were copied into Documents with their original filenames; their source copies were preserved. Historical PDFs describe the project stage at which they were written. The résumé PDF still needs its candidate/graduation wording reviewed separately.
 
-<details>
-<summary><strong>View additional SDACS diagrams</strong></summary>
+## Review and deployment
 
-#### Recording Node Functional Block Diagram
+Version 2 work stays on `portfolio-v2-content`. This implementation does not change main, push commits or change GitHub Pages settings. Verify the repository's configured Pages deployment source before publishing; committing to this content branch alone is not a deployment instruction.
 
-![Recording node functional block diagram](Diagrams/SDACS_RecordingNodes_FunctionalBlockDiagram.png)
-
-#### Server Functional Block Diagram
-
-![Server functional block diagram](Diagrams/SDACS_Server_FunctionalBlockDiagram.png)
-
-#### Conceptual Node Placement Diagram
-
-![SDACS conceptual node placement diagram](Diagrams/SDACS_Conceptual_Diagram.png)
-
-#### FreqEasy Machine-Learning Pipeline
-
-![FreqEasy AI and machine-learning system block diagram](Diagrams/FreqEasy_AI-ML_SystemBlockDiagram.png)
-
-</details>
-
-#### Supporting Documents
-
-- [Firmware Architecture Overview (PDF)](Documents/Kyle_Dick_SDACS_Firmware_Architecture_README.pdf)
-- [Engineering Design and Test Plan (PDF)](Documents/SDACS_EngineeringDesign%26TestPlan.pdf)
-- [SDACS Test Report (PDF)](Documents/SDACS_Test_Report.pdf)
-- [Project Proposal (PDF)](Documents/Group2_ProjectProposal_updated.pdf)
-- [Interim Status Report (PDF)](Documents/KD_Interim_Status_Report.pdf)
-- [Summary of Work (PDF)](Documents/SDACS_SummaryofWork.pdf)
-- [Remote Flutter Access and Tailscale Guide (PDF)](Documents/SDACS_Remote_Flutter_Access_Tailscale_Guide.pdf)
-
-#### Software, Data and Presentations
-
-- [Node-RED Flow (JSON)](Node-RED%20Flow/SDACS_flow.json)
-- [Design and Testing Presentation (PDF)](Presentations/SDACS_Design%26Testing_Presentation.pdf)
-- [TinyML Presentation (PDF)](Presentations/TINYML%20Presentation.pdf)
-- [Edge Impulse Dataset Documentation](SDACS%20Datasets/SDACS_Edge_Impulse_Ready_Dataset/SDACS_CLEANING_AND_FINALIZATION_REPORT.md)
-- [Edge Impulse Feature Dictionary (CSV)](SDACS%20Datasets/SDACS_Edge_Impulse_Ready_Dataset/feature_dictionary.csv)
-- [Node-Level Training Dataset (CSV)](SDACS%20Datasets/SDACS_Edge_Impulse_Ready_Dataset/sdacs_ei_node_training.csv)
-- [Room-Fused Training Dataset (CSV)](SDACS%20Datasets/SDACS_Edge_Impulse_Ready_Dataset/sdacs_ei_room_fused_training.csv)
-- [MATLAB Telemetry Dataset (CSV)](SDACS%20Datasets/MATLAB_Node04_For_Amy/sdacs_matlab_relevant_telemetry.csv)
-- [MATLAB Dataset Guide (PDF)](SDACS%20Datasets/MATLAB_Node04_For_Amy/SDACS_MATLAB_Guide_for_Amy_v2.pdf)
-
-### CONTADA Embedded Telemetry and Control Platform
-
-**ESP32 | STM32 | Raspberry Pi | Sensors | MQTT | CAN | Modbus | MATLAB**
-
-CONTADA is a wind-energy and battery-storage research platform developed
-through a collaboration between Purus Power and the Conestoga SMART Centre.
-
-The project required the integration of embedded sensing, edge processing,
-communications, instrumentation and engineering test equipment.
-
-#### My Contributions
-
-- Contributed to the design of a multi-device telemetry and control architecture.
-- Developed and tested ESP32 and STM32 embedded sensor interfaces.
-- Integrated BME680, BNO085 and ADXL335 sensing hardware.
-- Investigated CAN, Modbus, RS485, Ethernet and MQTT communication paths.
-- Integrated measurements with Raspberry Pi, Mosquitto and Node-RED services.
-- Created MATLAB/Simulink models for sensor-driven control and validation.
-- Interpreted schematics, sensor datasheets and interface documentation.
-- Performed bench testing using oscilloscopes, multimeters and power supplies.
-- Presented engineering progress and technical recommendations to the client
-  and SMART Centre team.
-
-#### Supporting Document
-
-- [Embedded Systems Technical Summary (PDF)](Documents/Kyle_Dick_CONTADA_Embedded_Systems_Technical_Summary.pdf)
-
-### Multi-Processor Elevator Control System
-
-**STM32 | C | CAN | Raspberry Pi | UART | Motor Control**
-
-- Implemented CAN communication across STM32, Raspberry Pi, Arduino and motor
-  controller hardware.
-- Developed embedded C firmware for control and safety functions.
-- Integrated a Raspberry Pi-based interface using PHP and JSON.
-- Implemented emergency-call and input-lockout functionality.
-- Tested communication and system behaviour across multiple processors.
-
-### Mobile Robot Control Platform
-
-**Altium Designer | Embedded C | UART | PCB Design | Motor Control**
-
-- Designed and assembled custom PCBs for power and control subsystems.
-- Developed C firmware for DC, stepper and servo motor control.
-- Implemented RS232/UART communication with a Raspberry Pi.
-- Performed board bring-up and hardware debugging using laboratory equipment.
-- Integrated electrical, mechanical and software subsystems into a working
-  mobile robot.
-
-## Current Development
-
-I am currently improving the SDACS platform through:
-
-- Additional acoustic calibration and frequency-response testing
-- Refinement of the labelled machine-learning dataset
-- More reliable MQTT and Wi-Fi fault handling
-- Structured hardware-interface testing
-- Improved firmware documentation
-- Expansion of the GitHub repositories with reviewed code samples
-
-## Technical Skills
-
-**Firmware and programming:** C, C++, Python, ESP-IDF, STM32 development,
-MATLAB/Simulink, JSON
-
-**Embedded platforms:** ESP32-S3, STM32, Raspberry Pi, Arduino, embedded Linux
-
-**Interfaces and networking:** I2C, I2S, UART/RS232, CAN, SPI, Ethernet,
-Wi-Fi, MQTT and Modbus
-
-**Hardware development:** Altium Designer, schematic capture, PCB layout,
-board assembly, soldering, hardware bring-up and datasheet interpretation
-
-**Testing and tools:** Git/GitHub, Visual Studio Code, Node-RED, oscilloscope,
-multimeter, bench power supply, serial debugging and technical test procedures
+Run `git diff --check` and review changed links and YAML before committing. With Python and PyYAML already available, run `python scripts/validate_portfolio.py` for static checks. If Ruby/Jekyll is available, also build with `jekyll build` and inspect the homepage and project pages on desktop and mobile. Static checks do not replace a Jekyll build or browser review.

@@ -1,9 +1,159 @@
-# Coursework entries are available as site.data.coursework, in list order.
-# To add the first item, remove [] and uncomment/fill in the example below.
-# To add another item, append another block beginning with "- title:".
-# Include only coursework you want to highlight. Use spaces, not tabs.
-[]
+# Titles describe subject areas and design experience,
+# not verified official course titles.
+# Technologies include tools, interfaces and methods.
+# Category labels support grouping when rendering the data.
 
-# - title: "Course title"
-#   institution: "Institution name"
-#   summary: "Relevant topics, practical work, or a course project."
+- category: "Electronic Systems Engineering"
+  title: "Embedded Systems"
+  description: >-
+    Embedded C development for microcontrollers, hardware interfaces
+    and integrated embedded systems.
+  technologies: ["Embedded C", "Microcontrollers", "Hardware Interfaces"]
+  featured: false
+
+- category: "Electronic Systems Engineering"
+  title: "Electronics"
+  description: >-
+    Analog and digital electronic systems, including circuit analysis
+    and practical implementation.
+  technologies: ["Analog Electronics", "Digital Electronics", "Circuit Analysis"]
+  featured: false
+
+- category: "Electronic Systems Engineering"
+  title: "PCB Design / Electronic Hardware"
+  description: >-
+    Schematic capture, PCB layout and hardware integration,
+    including Altium-based project work.
+  technologies: ["Altium Designer", "Schematic Capture", "PCB Layout"]
+  featured: false
+
+- category: "Electronic Systems Engineering"
+  title: "Sensors and Instrumentation"
+  description: >-
+    Sensor interfacing, measurement systems and signal acquisition,
+    using engineering test equipment for validation.
+  technologies: ["Sensor Interfacing", "Signal Acquisition", "Engineering Test Equipment"]
+  featured: false
+
+- category: "Electronic Systems Engineering"
+  title: "Communications and Interfaces"
+  description: >-
+    Coursework and project exposure to embedded interfaces and networking,
+    including investigation of RS485/Modbus communication paths.
+  technologies:
+    - "UART/RS232"
+    - "CAN"
+    - "I2C"
+    - "I2S"
+    - "SPI"
+    - "Ethernet"
+    - "Wi-Fi"
+    - "MQTT"
+    - "RS485/Modbus"
+  featured: false
+
+- category: "Electronic Systems Engineering"
+  title: "Control Systems"
+  description: >-
+    Embedded control and system behaviour, with MATLAB/Simulink
+    exposure for modelling and validation.
+  technologies: ["Embedded Control", "MATLAB", "Simulink"]
+  featured: false
+
+- category: "Electronic Systems Engineering"
+  title: "Signal Processing"
+  description: >-
+    Signal acquisition and FFT-based analysis, including acoustic
+    signal-processing work in the SDACS capstone.
+  technologies: ["Signal Acquisition", "FFT", "Acoustic Analysis"]
+  featured: false
+
+- category: "Electronic Systems Engineering"
+  title: "Power Electronics"
+  description: "Academic coursework in power electronics."
+  technologies: []
+  featured: false
+
+- category: "Electronic Systems Engineering"
+  title: "Capstone Engineering Design"
+  description: >-
+    Smart Distributed Acoustic Calibration System (SDACS), integrating
+    firmware, sensors, signal processing, networking, Raspberry Pi/Linux
+    services and engineering validation.
+  technologies:
+    - "Embedded C"
+    - "ESP32-S3"
+    - "Sensors"
+    - "FFT"
+    - "Wi-Fi"
+    - "MQTT"
+    - "Raspberry Pi"
+    - "Linux"
+  featured: false
+
+- category: "Architectural Construction Engineering Technology"
+  category_subtitle: "Selected Coursework and Design Experience"
+  title: "AutoCAD / Technical Drafting"
+  description: >-
+    Designed residential floor plans, elevations and wall sections,
+    applying CAD standards through significant AutoCAD studio experience.
+  technologies: ["AutoCAD", "Technical Drafting", "CAD Standards"]
+  featured: false
+
+- category: "Architectural Construction Engineering Technology"
+  category_subtitle: "Selected Coursework and Design Experience"
+  title: "Revit / Building Information Modelling"
+  description: >-
+    Used Revit for architectural design, including residential outdoor
+    spaces and a conceptual Tesla Motors dealership project.
+  technologies: ["Revit", "Building Information Modelling"]
+  featured: false
+
+- category: "Architectural Construction Engineering Technology"
+  category_subtitle: "Selected Coursework and Design Experience"
+  title: "Residential Building Design"
+  description: >-
+    Applied architectural drafting and residential construction
+    principles to floor plans, elevations and wall sections.
+  technologies: ["Architectural Drafting", "Residential Construction"]
+  featured: false
+
+- category: "Architectural Construction Engineering Technology"
+  category_subtitle: "Selected Coursework and Design Experience"
+  title: "Small Commercial Design"
+  description: >-
+    Developed a small-commercial building design from initial drafting
+    through a completed drawing package.
+  technologies: ["Building Design", "Technical Drafting", "Drawing Documentation"]
+  featured: false
+
+- category: "Architectural Construction Engineering Technology"
+  category_subtitle: "Selected Coursework and Design Experience"
+  title: "Ontario Building Code"
+  description: "Working knowledge of Ontario Building Code Section 9."
+  technologies: ["Ontario Building Code Section 9"]
+  featured: false
+
+- category: "Architectural Construction Engineering Technology"
+  category_subtitle: "Selected Coursework and Design Experience"
+  title: "Steel and Concrete Construction"
+  description: >-
+    Studied steel and concrete construction systems and their
+    application to building design.
+  technologies: ["Steel Construction", "Concrete Construction"]
+  featured: false
+
+- category: "Architectural Construction Engineering Technology"
+  category_subtitle: "Selected Coursework and Design Experience"
+  title: "Surveying"
+  description: "Practical exposure to surveying tools and field measurement."
+  technologies: ["Surveying", "Field Measurement"]
+  featured: false
+
+- category: "Architectural Construction Engineering Technology"
+  category_subtitle: "Selected Coursework and Design Experience"
+  title: "Sustainable Building Design"
+  description: >-
+    Exposure to LEED and WELL concepts through Build-It-Green coursework.
+  technologies: ["LEED Concepts", "WELL Concepts"]
+  featured: false

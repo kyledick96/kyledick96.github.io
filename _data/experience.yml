@@ -1,14 +1,122 @@
-# Experience entries are available as site.data.experience.
-# This list is intentionally empty until the content migration.
-# To add the first item, remove [] and uncomment/fill in the example below.
-# To add another item, append another block beginning with "- role:".
-# Quote periods and any text containing a colon. Use spaces, not tabs.
-[]
+# Entries appear in this order: engineering relevance, not end date.
+- company: "Conestoga SMART Research Centre"
+  client: "Purus Power"
+  role: "Embedded Systems Engineering Co-op"
+  location: "Cambridge, Ontario"
+  dates: "Sept. 2025 – Aug. 2026"
+  summary: >-
+    Developed embedded firmware and integrated hardware for a distributed
+    wind-energy telemetry and control platform.
+  highlights:
+    - >-
+      Developed and tested C firmware for ESP32-S3 edge devices and
+      integrated I2C, analog and digital sensors.
+    - >-
+      Integrated embedded targets with Raspberry Pi/Linux, Mosquitto MQTT
+      and Node-RED. Diagnosed end-to-end firmware, network and telemetry
+      issues using serial logs, network checks and controlled bench tests.
+    - >-
+      Contributed to architecture decisions involving embedded controllers,
+      Linux hosts, DAQ hardware and communications, including evaluation
+      of Wi-Fi and Ethernet approaches.
+    - >-
+      Performed hardware bring-up and interface debugging using schematics,
+      datasheets, oscilloscopes, multimeters and serial diagnostics.
+    - >-
+      Developed repeatable validation procedures and documented
+      engineering recommendations.
+  technologies:
+    - "ESP32-S3"
+    - "C"
+    - "ESP-IDF"
+    - "Raspberry Pi"
+    - "Linux"
+    - "MQTT"
+    - "Node-RED"
+    - "I2C"
+    - "Ethernet"
+    - "Wi-Fi"
+    - "CAN"
+    - "RS485"
+    - "Modbus"
+    - "DAQ"
+    - "Instrumentation"
+  featured: true
 
-# - role: "Role title"
-#   organization: "Organization name"
-#   period: "Month YYYY - Month YYYY"
-#   summary: "A short description of the role."
-#   highlights:
-#     - "Describe a contribution and its outcome."
-#     - "Describe another contribution."
+- company: "Conestoga SMART Research Centre"
+  client: "Vortex Technology Group"
+  role: "Research Assistant"
+  location: "Cambridge, Ontario"
+  dates: "Jan. 2025 – Apr. 2025"
+  summary: >-
+    Investigated an AC current-monitoring device and its suitability
+    for battery-test equipment.
+  highlights:
+    - >-
+      Reverse engineered the device to understand its sensing architecture
+      and communication interfaces.
+    - "Interpreted device documentation and datasheets."
+    - "Evaluated current transformers and Modbus-to-Ethernet hardware."
+    - "Performed bench measurements."
+    - "Documented technical findings and engineering recommendations."
+  technologies:
+    - "AC current sensing"
+    - "Current transformers"
+    - "Modbus"
+    - "Ethernet"
+    - "Instrumentation"
+    - "Datasheet analysis"
+    - "Bench testing"
+  featured: true
+
+- company: "Recurrent Energy / Canadian Solar"
+  client: ""
+  role: "Document Technical Writer"
+  location: "Guelph, Ontario"
+  dates: "May 2024 – Present"
+  summary: >-
+    Technical documentation and engineering records
+    in a renewable-energy project environment.
+  highlights:
+    - "Supported document quality and technical accuracy."
+    - "Contributed to cross-functional technical communication."
+  technologies:
+    - "Technical documentation"
+    - "Engineering records"
+  featured: true
+
+- company: "KingsRidge Building Group"
+  client: "Homeowners in Aurora/Newmarket area"
+  role: "Architectural Technologist"
+  location: "Newmarket, Ontario"
+  dates: "Mar. 2021 – Oct. 2021"
+  summary: >-
+    Combined residential CAD/design work with hands-on construction,
+    connecting digital designs with physical site work.
+  highlights:
+    - "Designed high-end decks and backyard features using Revit and AutoCAD."
+    - "Produced CAD/design work for residential construction."
+    - >-
+      Participated in demolition, insulation installation,
+      interlock and site work.
+  technologies:
+    - "Revit"
+    - "AutoCAD"
+  featured: false
+
+- company: "Skyjack / Linamar"
+  client: ""
+  role: "Boom Line Assembly Worker"
+  location: "Guelph, Ontario"
+  dates: "Sept. 2017 – Dec. 2017"
+  summary: >-
+    Assembled aerial work platforms in a production manufacturing environment.
+  highlights:
+    - "Installed engines and components on aerial work platforms."
+    - "Used torque wrenches, pneumatic impact tools and bridge cranes."
+    - "Followed factory 5S and MSDS procedures."
+  technologies:
+    - "Torque wrenches"
+    - "Pneumatic impact tools"
+    - "Bridge cranes"
+  featured: false

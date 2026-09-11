@@ -1,12 +1,47 @@
-# Skill groups are available as site.data.skills, in list order.
-# Existing skills remain in index.md until the later migration.
-# To add the first group, remove [] and uncomment/fill in the example below.
-# To add another group, append another block beginning with "- category:".
-# To add a skill within a group, append a line under items at the same indent.
-[]
-
-# - category: "Firmware and programming"
-#   items:
-#     - "C"
-#     - "C++"
-#     - "Python"
+# Items may include a qualification where it clarifies the scope of experience.
+- category: "Programming & Firmware"
+  items:
+    - "C"
+    - "C++ (working knowledge)"
+    - "Python (working knowledge)"
+    - "ESP-IDF"
+    - "STM32 development"
+    - "FreeRTOS-based development"
+    - "CMake"
+    - "JSON"
+- category: "Embedded Platforms"
+  items: ["ESP32-S3", "STM32", "Raspberry Pi", "Arduino", "Embedded Linux"]
+- category: "Interfaces & Networking"
+  items:
+    - "I2C"
+    - "I2S"
+    - "SPI"
+    - "UART / RS232"
+    - "CAN"
+    - "RS485 / Modbus"
+    - "Ethernet"
+    - "Wi-Fi"
+    - "MQTT"
+- category: "PCB & Hardware"
+  items:
+    - "Altium Designer"
+    - "Schematic capture"
+    - "PCB layout"
+    - "Board assembly"
+    - "Soldering"
+    - "Board bring-up"
+    - "Sensor integration"
+    - "Component / interface troubleshooting"
+- category: "Test & Instrumentation"
+  items:
+    - "Oscilloscope"
+    - "Multimeter"
+    - "Bench power supply"
+    - "Serial debugging"
+    - "Network diagnostics"
+    - "Validation procedures"
+    - "Datasheet interpretation"
+- category: "Software & Engineering Tools"
+  items: ["Git / GitHub", "VS Code", "MATLAB / Simulink", "Node-RED", "Mosquitto", "SQLite"]
+- category: "CAD / Design"
+  items: ["AutoCAD", "Revit", "Technical drafting", "BIM exposure"]
