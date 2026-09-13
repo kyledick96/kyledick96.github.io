@@ -1,0 +1,83 @@
+{% assign profile = site.data.profile %}
+<section class="about-hero about-personal-hero" aria-labelledby="about-title">
+  <div class="about-introduction">
+  <p class="eyebrow">About me / Kyle Dick</p>
+  <h1 id="about-title">Hi, I'm Kyle.</h1>
+  <p class="lead">I work where code meets hardware: sensor interfaces, embedded firmware, custom boards, and the systems that connect them.</p>
+  <p class="about-intro-note">Outside engineering, I enjoy playing music at church and spending time outdoors with my wife.</p>
+  <div class="actions">
+    <a class="button" href="{{ profile.resume | relative_url | escape }}">Resume <span class="file-type">PDF &nearr;</span></a>
+    <a class="text-action" href="mailto:{{ profile.email | escape }}">Get in touch &nearr;</a>
+  </div>
+  </div>
+  <figure class="about-portrait">
+    <img src="{{ '/assets/images/about/hiking.jpg' | relative_url }}" width="1280" height="1906" alt="My wife and me hiking above a rocky valley and lake" fetchpriority="high" decoding="async">
+    <figcaption>Exploring together.</figcaption>
+  </figure>
+</section>
+
+<section class="section about-chapter" aria-labelledby="outside-title">
+  <h2 class="about-label" id="outside-title">01 / Outside engineering</h2>
+  <div class="about-copy">
+    <p>I enjoy playing drums at church and grew up playing the violin. My dad, a professionally trained musician who has toured the world, taught me to play.</p>
+    <p>My wife and I are in our second year of marriage. We love backcountry camping and canoeing, and spend much of our spare time playing disc golf and ultimate frisbee.</p>
+  </div>
+  <div class="about-photo-grid">
+    <figure>
+      <img src="{{ '/assets/images/about/wedding.jpg' | relative_url }}" width="1824" height="1358" alt="My wife and me showing our wedding rings on our wedding day" loading="lazy" decoding="async">
+      <figcaption>Our wedding day.</figcaption>
+    </figure>
+    <figure>
+      <img src="{{ '/assets/images/about/church-music.jpg' | relative_url }}" width="1824" height="1368" alt="A view from behind the drum kit as musicians play guitar and keyboard at church" loading="lazy" decoding="async">
+      <figcaption>Music at church, from behind the drums.</figcaption>
+    </figure>
+    <figure>
+      <img src="{{ '/assets/images/about/camping.jpg' | relative_url }}" width="1824" height="1368" alt="My wife and me beside a lake surrounded by pine trees" loading="lazy" decoding="async">
+      <figcaption>Time outdoors together.</figcaption>
+    </figure>
+    <figure>
+      <img src="{{ '/assets/images/about/disc-golf.jpg' | relative_url }}" width="1824" height="1368" alt="A group holding colourful disc golf discs beside a wooded course" loading="lazy" decoding="async">
+      <figcaption>A round of disc golf.</figcaption>
+    </figure>
+  </div>
+</section>
+
+<section class="section about-chapter" aria-labelledby="path-title">
+  <h2 class="about-label" id="path-title">02 / How I got here</h2>
+  <div class="about-copy">
+    <p>My path into electronics runs through manufacturing, construction, and CAD. Before my electronic systems degree, I studied architectural construction engineering technology, working with building science, drafting, and BIM.</p>
+    <p>That background still shapes how I approach hardware: thinking about how something will be assembled, how the pieces fit together, and what someone else will need to understand it.</p>
+    <p>{{ profile.graduation | escape }}</p>
+  </div>
+</section>
+
+<section class="section about-chapter" aria-labelledby="work-title">
+  <h2 class="about-label" id="work-title">03 / What I work on</h2>
+  <div class="about-copy">
+    <p>My work spans firmware, board design, instrumentation, and hardware integration. I've written code for ESP32-S3 and STM32 devices, designed and assembled PCBs, and connected embedded nodes to services running on Linux.</p>
+    <p>Through the Conestoga SMART Research Centre, I've worked on sensing and renewable-energy telemetry. My projects also include distributed acoustic measurement and a mobile robot with custom motor-control hardware.</p>
+    <ul class="about-projects">
+      <li><a href="{{ '/projects/sdacs/' | relative_url }}">Distributed acoustic measurement &nearr;</a><span class="item-meta">Audio acquisition, signal processing, and connected sensor nodes.</span></li>
+      <li><a href="{{ '/projects/contada/' | relative_url }}">Wind-energy telemetry &nearr;</a><span class="item-meta">Embedded instrumentation and Linux-hosted telemetry.</span></li>
+      <li><a href="{{ '/projects/nerf-battle-bot/' | relative_url }}">A robot, from board to firmware &nearr;</a><span class="item-meta">PCB design, assembly, bring-up, and motor control.</span></li>
+    </ul>
+  </div>
+</section>
+
+<section class="section about-chapter" aria-labelledby="approach-title">
+  <h2 class="about-label" id="approach-title">04 / How I approach it</h2>
+  <div class="about-copy">
+    <p>A lot of my work happens between disciplines: tracing a fault from firmware to an interface, bringing up a board, or checking that the data reaching a backend matches what a device is measuring.</p>
+    <p>This portfolio includes design documents and test reports alongside the projects. They show the implementation decisions, debugging, and validation behind the finished work.</p>
+    <a class="text-action" href="{{ '/' | relative_url }}#experience">View my experience <span aria-hidden="true">&rarr;</span></a>
+  </div>
+</section>
+
+<section class="section about-chapter contact-section" aria-labelledby="next-title">
+  <h2 class="about-label" id="next-title">05 / What's next</h2>
+  <div class="about-copy">
+    <p>{{ profile.contact_intro | escape }}</p>
+    <a class="contact-email" href="mailto:{{ profile.email | escape }}">{{ profile.email | escape }}</a>
+    <div class="actions"><a class="text-action" href="{{ profile.github | escape }}">GitHub &nearr;</a><a class="text-action" href="{{ profile.linkedin | escape }}">LinkedIn &nearr;</a></div>
+  </div>
+</section>

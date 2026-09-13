@@ -1,45 +1,47 @@
 {% assign profile = site.data.profile %}
 <section class="hero" aria-labelledby="hero-title">
-  <p class="eyebrow">{{ profile.role | escape }}</p>
-  <h1 id="hero-title">{{ profile.name | escape }}</h1>
-  <p class="hero-focus">{{ profile.focus | escape }}</p>
-  <p class="lead">{{ profile.intro | escape }}</p>
-  <div class="actions">
-    <a class="button button-primary" href="#projects">View Projects <span aria-hidden="true">&rarr;</span></a>
-    <a class="button" href="{{ profile.resume | relative_url | escape }}">Resume <span class="file-type">PDF</span></a>
-    <a class="text-action" href="{{ profile.github | escape }}">GitHub</a>
-    <a class="text-action" href="{{ profile.linkedin | escape }}">LinkedIn</a>
-    <a class="text-action" href="#contact">Contact</a>
+  <div class="hero-identity">
+    <p class="eyebrow">Portfolio / {{ profile.role | escape }}</p>
+    <h1 id="hero-title" class="wordmark">KYLE<br>DICK<span aria-hidden="true">.</span></h1>
+    <p class="hero-caption">Hardware. Firmware. Everything between.</p>
   </div>
-</section>
-
-<section id="about" class="section about-section" aria-labelledby="about-title">
-  <h2 id="about-title">About</h2>
-  <div class="about-copy">
-    <p>{{ profile.about | escape }}</p>
-    <p class="item-meta">{{ profile.graduation | escape }}</p>
+  <div class="hero-description">
+    <p class="hero-statement">{{ profile.intro | escape }}</p>
+    <a class="text-action" href="{{ '/about/' | relative_url }}">A little about me <span aria-hidden="true">&nearr;</span></a>
+  </div>
+  <div class="hero-command">
+    <p class="eyebrow">Explore the work</p>
+    <a class="command-link" href="#projects"><span aria-hidden="true">$</span> explore ./projects <span aria-hidden="true">&darr;</span></a>
+  </div>
+  <div class="hero-links">
+    <p class="eyebrow">Find me elsewhere</p>
+    <div class="actions">
+      <a href="{{ profile.github | escape }}">GitHub &nearr;</a>
+      <a href="{{ profile.linkedin | escape }}">LinkedIn &nearr;</a>
+      <a href="{{ profile.resume | relative_url | escape }}">Resume <span class="file-type">PDF &nearr;</span></a>
+    </div>
   </div>
 </section>
 
 <section id="projects" class="section" aria-labelledby="projects-title">
-  <div class="section-heading"><p class="eyebrow">Design, implementation and validation</p><h2 id="projects-title">Featured Projects</h2></div>
-  <div class="project-grid">
+  <div class="section-heading index-heading"><h2 id="projects-title">Project index</h2><p class="item-meta">{{ site.data.projects.size }} projects / Design, build, test</p></div>
+  <div class="project-index">
+    <div class="index-labels" aria-hidden="true"><span>#</span><span>Project / technologies</span><span>Year</span><span></span></div>
     {% for project in site.data.projects %}
-    {% if project.featured %}{% include project-card.html project=project %}{% endif %}
-    {% endfor %}
-  </div>
-  {% assign other_projects = site.data.projects | where: "featured", false %}
-  {% if other_projects.size > 0 %}
-  <div class="other-projects">
-    <h3>More engineering work</h3>
-    {% for project in other_projects %}
-    <article class="project-row">
-      <div><p class="item-meta">{{ project.subtitle | escape }} &middot; {{ project.year | escape }}</p><h4><a href="{{ project.page | relative_url | escape }}">{{ project.title | escape }}</a></h4><p>{{ project.summary | escape }}</p></div>
-      <a class="text-action" href="{{ project.page | relative_url | escape }}">Read case study<span class="sr-only">: {{ project.title | escape }}</span> <span aria-hidden="true">&rarr;</span></a>
+    <article class="index-project">
+      <span class="project-number" aria-hidden="true">{% if forloop.index < 10 %}0{% endif %}{{ forloop.index }}</span>
+      <div class="index-project-copy">
+        <p class="eyebrow">{{ project.subtitle | escape }}</p>
+        <h3><a href="{{ project.page | relative_url | escape }}">{{ project.title | escape }}</a></h3>
+        <p>{{ project.summary | escape }}</p>
+        {% assign card_tags = project.technologies | slice: 0, 6 %}
+        {% include tags.html items=card_tags %}
+      </div>
+      <span class="item-meta project-year">{% if project.year %}{{ project.year | escape }}{% else %}&mdash;{% endif %}</span>
+      <a class="project-arrow" href="{{ project.page | relative_url | escape }}"><span aria-hidden="true">&nearr;</span><span class="sr-only">Read case study: {{ project.title | escape }}</span></a>
     </article>
     {% endfor %}
   </div>
-  {% endif %}
 </section>
 
 <section id="experience" class="section" aria-labelledby="experience-title">

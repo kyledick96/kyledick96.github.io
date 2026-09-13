@@ -7,6 +7,7 @@ Kyle Dick's portfolio at https://kyledick96.github.io, built with GitHub Pages a
 | Content | Edit |
 | --- | --- |
 | Hero, about, contact and social links | `_data/profile.yml` |
+| Personal About page | `_includes/about.html` (page: `about.md`) |
 | Employment | `_data/experience.yml` |
 | Education / coursework | `_data/education.yml` / `_data/coursework.yml` |
 | Project cards and shared metadata | `_data/projects.yml` |
@@ -30,13 +31,13 @@ permalink: /projects/example/
 ---
 ```
 
-`subtitle` currently supplies the project type. An optional separate `type` is supported by the project layout. Optional `dates` overrides the year display on detail pages. Images use `image` and descriptive `image_alt` fields. Document entries use `title` and `url`. Only three projects are currently featured; other projects appear below those cards.
+`subtitle` currently supplies the project type. An optional separate `type` is supported by the project layout. Optional `dates` overrides the year display on detail pages. Images use `image` and descriptive `image_alt` fields. Document entries use `title` and `url`. The homepage lists all projects in YAML order in a numbered index. The featured flag remains available for other views.
 
 Skills use a list of `category` / `items` groups. Preserve qualifications such as working knowledge; do not add proficiency scores.
 
 ## Presentation and assets
 
-`index.md` includes `_includes/home.html`. Shared cards, navigation and small list components live in `_includes/`; page shells live in `_layouts/`. The project layout reads metadata by slug.
+`index.md` includes `_includes/home.html`. `about.md` adds a dedicated About page at `/about/`. The monochrome theme uses system monospace fonts, an offset wordmark, and a numbered project index inspired by the supplied skills.sh reference. Shared cards, navigation and small list components live in `_includes/`; page shells live in `_layouts/`. The project layout reads metadata by slug.
 
 Edit the CSS custom properties at the top of `assets/css/style.css` to change the theme. Responsive rules are near the bottom. Navigation and expandable detail sections work without JavaScript.
 
